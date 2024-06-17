@@ -35,5 +35,5 @@ fi
 
 git push
 
-sudo nixos-rebuild switch --flake .#
+sudo nixos-rebuild switch --flake path:/home/realram/.dotfiles
 
