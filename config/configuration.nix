@@ -62,7 +62,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     pkgs.git                #installed first bc flakes needs it
    # home-manager       #declaratively configure dotfiles
     pkgs.awesome            #x11 WM
