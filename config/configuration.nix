@@ -110,6 +110,7 @@
     pkgs.fprintd            #fingerprint stuff
     pkgs.libfprint
     pkgs.imagemagick
+    pkgs.discord
     inputs.nixvim-flake.packages.${system}.default
 ];
 
