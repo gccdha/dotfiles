@@ -204,7 +204,7 @@
 
   #programs.nixvim.enable = true;
   #programs.neovim.enable = true;
-  #services.gvfs.enable = true;
+  services.gvfs.enable = true;
   #programs.xfconf.enable = true;
 
   # Enable the OpenSSH daemon.
