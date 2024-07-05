@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       #<home-manager/nixos>
-      ./secrets.nix #Time Zone
+      ./secrets.nix #Time Zone, wg-key
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
@@ -193,15 +193,18 @@
     enable = true;
   };
 
-  services.fprintd = {
-    enable = true;
-    tod.enable = true;
-    tod.driver = pkgs.libfprint-2-tod1-goodix;
-  };
 
-  security.pam.services.hyprlock = {
-    fprintAuth = true;
-  };
+  #services.fprintd = {
+  #  enable = true;
+  #  tod.enable = true;
+  #  tod.driver = pkgs.libfprint-2-tod1-goodix;
+  #};
+
+  #security.pam.services.hyprlock = {
+  #  fprintAuth = true;
+  #};
+
+
 
   #programs.nixvim.enable = true;
   #programs.neovim.enable = true;
@@ -213,7 +216,7 @@
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 22 ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedUDPPorts = [ 51820 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
