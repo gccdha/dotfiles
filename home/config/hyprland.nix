@@ -57,7 +57,7 @@
       "col.active_border" = "rgba(33ccffee) rgba(9999ffee) 45deg";
       "col.inactive_border" = "rgba(595959aa)";
       layout = "dwindle";
-      no_cursor_warps = "true"; #won't move cursor when focus is changed via kb
+      cursor_warps = "false"; #won't move cursor when focus is changed via kb
     };
     decoration = {
       rounding = "10";
