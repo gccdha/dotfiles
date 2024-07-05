@@ -201,11 +201,14 @@
         {
             publicKey = "/zscnXzow2ayWgGRXUPOlrlxOEk1udk9tNjB1mnmjgA=";
             allowedIPs = [ "0.0.0.0/0" ];
-            endpoint = "realram.duckdns.org:51820";
+            endpoint = "10.0.0.209:51820";
         }
       ];
     };
   };
+
+  systemd.network.wait-online.enable = false;
+  boot.initrd.systemd.network.wait-online.enable = false;
 
   #services.fprintd = {
   #  enable = true;
@@ -229,7 +232,7 @@
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 22 ];
-  networking.firewall.allowedUDPPorts = [ 51820 ];
+  # networking.firewall.allowedUDPPorts = [ 51820 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
