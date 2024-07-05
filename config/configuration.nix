@@ -112,6 +112,7 @@
     pkgs.imagemagick
     pkgs.discord
     inputs.nixvim-flake.packages.${system}.default
+    pkgs.wireguard-tools
 ];
 
   fonts.fontconfig.enable = true;
