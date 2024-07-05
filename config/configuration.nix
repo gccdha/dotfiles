@@ -207,8 +207,8 @@
     };
   };
 
-  systemd.network.wait-online.enable = false;
-  boot.initrd.systemd.network.wait-online.enable = false;
+#  systemd.network.wait-online.enable = false;
+#  boot.initrd.systemd.network.wait-online.enable = false;
 
   #services.fprintd = {
   #  enable = true;
