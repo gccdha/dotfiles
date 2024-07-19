@@ -201,7 +201,7 @@
         {
             publicKey = "/zscnXzow2ayWgGRXUPOlrlxOEk1udk9tNjB1mnmjgA=";
             allowedIPs = [ "0.0.0.0/0" ];
-            endpoint = "2601:282:1c00:2570::a1b1:51820";
+            endpoint = "realram.duckdns.org:51820";
         }
       ];
     };
