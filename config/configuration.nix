@@ -113,6 +113,8 @@
     pkgs.discord
     inputs.nixvim-flake.packages.${system}.default
     pkgs.wireguard-tools
+
+    pkgs.pulseaudio      #allows access to pulse audio commands for pipewire
 ];
 
   fonts.fontconfig.enable = true;
@@ -202,6 +204,7 @@
             publicKey = "/zscnXzow2ayWgGRXUPOlrlxOEk1udk9tNjB1mnmjgA=";
             allowedIPs = [ "0.0.0.0/0" ];
             endpoint = "realram.duckdns.org:51820";
+            persistentKeepalive = 25;
         }
       ];
     };
