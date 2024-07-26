@@ -13,7 +13,9 @@
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.enable = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-66f1cdfb-d50f-4982-abfb-8ffe49797927".device = "/dev/disk/by-uuid/66f1cdfb-d50f-4982-abfb-8ffe49797927";
