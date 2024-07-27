@@ -182,14 +182,15 @@
     xkb.layout = "us";
     xkb.variant = "dvorak";                            #set dvorak as keyboard layout
     enable = true;                                     #enable X11
-    displayManager.sddm = {
+  };
+  services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
     };
 
     #windowManager.awesome.enable = true;              #enable awesomewm
     #displayManager.defaultSession = "none+awesome";   #set default session to no wm or awesome (TODO) is this required?
-  };
+
   programs.thunar.enable = true; 
   services.udev.packages = [ pkgs.qmk-udev-rules ];
   #programs.neovim = { 
