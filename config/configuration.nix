@@ -115,8 +115,8 @@
     pkgs.discord
     inputs.nixvim-flake.packages.${system}.default
     pkgs.wireguard-tools
-
     pkgs.pulseaudio      #allows access to pulse audio commands for pipewire
+    pkgs.plymouth        #Bootloader splash and LUKS password customization
 ];
 
   fonts.fontconfig.enable = true;
