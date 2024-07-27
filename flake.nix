@@ -1,5 +1,6 @@
 {
   description = "NixOS Configuration";
+  #I plan on changing the GRUB menu so lines concerning that are marked with "GRUB"
 
   # The nixos-unstable branch of the NixOS/nixpkgs repository on GitHub.
   inputs = {
@@ -9,9 +10,10 @@
     # nix based neovim
     nixvim-flake.url = "github:gccdha/nixvim";
     nixvim-flake.inputs.nixpkgs.follows = "nixpkgs";
+    grub2-themes.url = "github:vinceliuice/grub2-themes"; #GRUB
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, grub2-themes,... }: #GRUB
   let
     system = "x86_64-linux";
   in {
@@ -23,10 +25,11 @@
         modules = [
             ./config/configuration.nix
             home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.realram = import ./home/home.nix;
-          }
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.realram = import ./home/home.nix;
+            }
+            grub2-themes.nixosModules.default
         ];
       };
     };

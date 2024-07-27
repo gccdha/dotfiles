@@ -18,6 +18,11 @@
     loader = {
       grub.device = "nodev";
       grub.efiSupport = true;
+      grub2-theme = {
+        enable = true;
+        theme = "stylish";
+        footer = true;
+      };
       efi.canTouchEfiVariables = true;
     };
 
@@ -35,6 +40,7 @@
 
     consoleLogLevel = 0;
     initrd.verbose = false;
+    initrd.systemd.enable = true;
     kernelParams = [
       "quiet"
       "splash"
