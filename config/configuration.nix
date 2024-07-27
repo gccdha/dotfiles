@@ -20,7 +20,7 @@
       grub.efiSupport = true;
       grub2-theme = {
         enable = true;
-        theme = "stylish";
+        theme = "whitesur";
         footer = true;
       };
       efi.canTouchEfiVariables = true;
@@ -182,9 +182,9 @@
     xkb.layout = "us";
     xkb.variant = "dvorak";                            #set dvorak as keyboard layout
     enable = true;                                     #enable X11
-    displayManager.gdm = {
+    displayManager.sddm = {
       enable = true;
-      wayland = true;
+      wayland.enable = true;
     };
 
     #windowManager.awesome.enable = true;              #enable awesomewm
