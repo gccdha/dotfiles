@@ -14,11 +14,42 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.grub.efiSupport = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      grub.device = "nodev";
+      grub.efiSupport = true;
+      efi.canTouchEfiVariables = true;
+    };
 
-  boot.initrd.luks.devices."luks-66f1cdfb-d50f-4982-abfb-8ffe49797927".device = "/dev/disk/by-uuid/66f1cdfb-d50f-4982-abfb-8ffe49797927";
+    initrd.luks.devices."luks-66f1cdfb-d50f-4982-abfb-8ffe49797927".device = "/dev/disk/by-uuid/66f1cdfb-d50f-4982-abfb-8ffe49797927";
+
+    plymouth = {
+      enable = true;
+      theme = "sphere";
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "sphere" ];
+        })
+      ];
+    };
+
+    consoleLogLevel = 0;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "loglevel=3"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
+    ];
+
+  };
+
+
+
+  #boot.initrd.luks.devices."luks-66f1cdfb-d50f-4982-abfb-8ffe49797927".device = "/dev/disk/by-uuid/66f1cdfb-d50f-4982-abfb-8ffe49797927";
   networking.hostName = "FW16"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
