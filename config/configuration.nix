@@ -155,6 +155,7 @@
     pkgs.pulseaudio      #allows access to pulse audio commands for pipewire
     pkgs.plymouth        #Bootloader splash and LUKS password customization
     pkgs.whitesur-kde
+    pkgs.lutris
 ];
 
   fonts.fontconfig.enable = true;
@@ -187,6 +188,7 @@
   services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
+      theme = "WhiteSur";
     };
 
     #windowManager.awesome.enable = true;              #enable awesomewm
