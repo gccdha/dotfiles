@@ -147,7 +147,6 @@
     pkgs.cjson            #json parsing library
     pkgs.obsidian           #MD editor
     pkgs.fprintd            #fingerprint stuff
-    pkgs.libfprint
     pkgs.imagemagick
     pkgs.discord
     inputs.nixvim-flake.packages.${system}.default
@@ -256,11 +255,11 @@
 #  systemd.network.wait-online.enable = false;
 #  boot.initrd.systemd.network.wait-online.enable = false;
 
-  #services.fprintd = {
-  #  enable = true;
+  services.fprintd = {
+    enable = true;
   #  tod.enable = true;
   #  tod.driver = pkgs.libfprint-2-tod1-goodix;
-  #};
+  };
   programs.hyprlock.enable = true;
   security.pam.services.hyprlock = {
     fprintAuth = true;
