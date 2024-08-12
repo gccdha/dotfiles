@@ -32,8 +32,8 @@
 
     #INPUT RULES
     input = {
-      kb_layout = "us";
-      kb_variant = "dvorak";
+      kb_layout = "us,us";
+      kb_variant = "dvorak,";
       kb_model = "pc104";
       kb_options = "";
       kb_rules = "";
