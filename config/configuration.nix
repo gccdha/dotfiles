@@ -261,10 +261,10 @@
   #  tod.enable = true;
   #  tod.driver = pkgs.libfprint-2-tod1-goodix;
   #};
-
-  #security.pam.services.hyprlock = {
-  #  fprintAuth = true;
-  #};
+  programs.hyprlock.enable = true;
+  security.pam.services.hyprlock = {
+    fprintAuth = true;
+  };
 
 
 
