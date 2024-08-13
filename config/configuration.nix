@@ -238,20 +238,20 @@
     enable = true;
   };
 
-  networking.wireguard.interfaces = {
-    wg0 = {
-      ips = [ "10.8.0.2/24" ];
-      listenPort = 51820;
-      peers = [
-        {
-            publicKey = "/zscnXzow2ayWgGRXUPOlrlxOEk1udk9tNjB1mnmjgA=";
-            allowedIPs = [ "0.0.0.0/0" ];
-            endpoint = "realram.duckdns.org:51820";
-            persistentKeepalive = 25;
-        }
-      ];
-    };
-  };
+#  networking.wireguard.interfaces = {
+#    wg0 = {
+#      ips = [ "10.8.0.2/24" ];
+#      listenPort = 51820;
+#      peers = [
+#        {
+#          publicKey = "/zscnXzow2ayWgGRXUPOlrlxOEk1udk9tNjB1mnmjgA=";
+#          allowedIPs = [ "0.0.0.0/0" ];
+#            endpoint = "realram.duckdns.org:51820";
+#            persistentKeepalive = 25;
+#        }
+#      ];
+#    };
+#  };
 
 #  systemd.network.wait-online.enable = false;
 #  boot.initrd.systemd.network.wait-online.enable = false;
