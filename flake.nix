@@ -11,6 +11,7 @@
     nixvim-flake.url = "github:gccdha/nixvim";
     nixvim-flake.inputs.nixpkgs.follows = "nixpkgs";
     grub2-themes.url = "github:vinceliuice/grub2-themes"; #GRUB
+    plover-flake.url = "github:dnaq/plover-flake";        #Plover Plugins
   };
 
   outputs = inputs@{ nixpkgs, home-manager, grub2-themes,... }: #GRUB
