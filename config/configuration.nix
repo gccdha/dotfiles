@@ -155,7 +155,6 @@
     pkgs.plymouth        #Bootloader splash and LUKS password customization
     pkgs.whitesur-kde
     pkgs.lutris
-    pkgs.plover.dev
 ];
 
   fonts.fontconfig.enable = true;
