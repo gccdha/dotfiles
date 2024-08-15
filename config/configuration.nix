@@ -150,7 +150,9 @@
     pkgs.imagemagick
     pkgs.discord
     inputs.nixvim-flake.packages.${system}.default
-    inputs.plover-dotool-output 
+    (inputs.plover-flake.packages.${system}.plover.with-plugins (
+          ps: with ps; [ plover-lapwing-aio ]
+        )) 
     pkgs.wireguard-tools
     pkgs.pulseaudio      #allows access to pulse audio commands for pipewire
     pkgs.plymouth        #Bootloader splash and LUKS password customization

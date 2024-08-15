@@ -18,7 +18,7 @@
     #plover-flake.inputs.nixpkgs.follows = "nixpkgs"; 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, grub2-themes, plover-flake,... }: #GRUB
+  outputs = inputs@{ self, nixpkgs, home-manager, grub2-themes, ... }: #GRUB
   let
     system = "x86_64-linux";
   in {
