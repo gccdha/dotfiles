@@ -1,6 +1,6 @@
 [submodule "nixvim"]
 	path = nixvim
 	url = git@github.com:gccdha/nixvim-flake.git
-[submodule "plover-wayland-nix"]
-	path = plover-wayland-nix
-	url = git@github.com:gccdha/plover-wayland-nix.git
+[submodule "plover-flake"]
+	path = plover-flake
+	url = git@github.com:gccdha/plover-flake.git

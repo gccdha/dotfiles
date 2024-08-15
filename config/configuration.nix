@@ -158,6 +158,7 @@
       ps: with ps; [
         plover-lapwing-aio
         plover-uinput
+        plover-output-dotool
       ]
     )) 
     pkgs.wireguard-tools

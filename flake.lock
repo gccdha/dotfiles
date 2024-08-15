@@ -380,21 +380,22 @@
         ],
         "plover": "plover",
         "plover-machine-hid": "plover-machine-hid",
+        "plover-output-dotool": "plover-output-dotool",
         "plover-stroke": "plover-stroke",
         "plover2cat": "plover2cat",
         "plover_plugins_registry": "plover_plugins_registry",
         "rtf-tokenize": "rtf-tokenize"
       },
       "locked": {
-        "lastModified": 1723606611,
-        "narHash": "sha256-J+kNwWomt/j30d3gPTBFZe90fHzbOyzxmBTzu51mcMQ=",
-        "owner": "dnaq",
+        "lastModified": 1723704737,
+        "narHash": "sha256-XGtENZUYWxG7I0GKPgm1jYxqcSUbPxFbXXq+96trfLc=",
+        "owner": "gccdha",
         "repo": "plover-flake",
-        "rev": "82c23465173010229b10bb0a724a41b09025d948",
+        "rev": "c89c2918195121af04b1fe109a909bb8d0c517a2",
         "type": "github"
       },
       "original": {
-        "owner": "dnaq",
+        "owner": "gccdha",
         "repo": "plover-flake",
         "type": "github"
       }
@@ -412,6 +413,22 @@
       "original": {
         "owner": "dnaq",
         "repo": "plover-machine-hid",
+        "type": "github"
+      }
+    },
+    "plover-output-dotool": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710166366,
+        "narHash": "sha256-Fl4/MmXS3NZqgR1E/vl8iJizSeRyhDLH4bhLy92upqY=",
+        "owner": "halbGefressen",
+        "repo": "plover-output-dotool",
+        "rev": "25e7df1a116672163256ccef85cfd91f7e76b9cf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "halbGefressen",
+        "repo": "plover-output-dotool",
         "type": "github"
       }
     },
