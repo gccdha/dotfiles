@@ -88,8 +88,8 @@
   users.users.realram = {
     isNormalUser = true;
     description = "realram";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
-    packages = with pkgs; [];
+    extraGroups = [ "networkmanager" "wheel" "audio" "input" ];
+    packages = [];
   };
 
   #home-manager.users.realram = import /home/realram/.config/home-manager/home.nix;
@@ -200,7 +200,12 @@
     #displayManager.defaultSession = "none+awesome";   #set default session to no wm or awesome (TODO) is this required?
 
   programs.thunar.enable = true; 
-  services.udev.packages = [ pkgs.qmk-udev-rules ];
+  services.udev = {
+    packages = [ pkgs.qmk-udev-rules ];
+    extraRules = ''
+      KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
+    ''; #for plover
+  };
   #programs.neovim = { 
   #  enable        = true;
   #  defaultEditor = true;
