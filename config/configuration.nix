@@ -81,6 +81,10 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  i18n.inputMethod = {
+    enabled = "ibus";
+  };
+
   # Configure console keymap
   console.keyMap = "dvorak";
 
