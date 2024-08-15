@@ -12,11 +12,13 @@
     nixvim-flake.inputs.nixpkgs.follows = "nixpkgs";
     grub2-themes.url = "github:vinceliuice/grub2-themes"; #GRUB
     grub2-themes.inputs.nixpkgs.follows = "nixpkgs";
-    plover-flake.url = "github:dnaq/plover-flake";        #Plover Plugins
+    plover-flake.url = "github:dnaq/plover-flake";        #Plover Plugins (HTF I get work :cry:)
     plover-flake.inputs.nixpkgs.follows = "nixpkgs";
+    #plover-flake.url = "github:gccdha/plover-wayland-nix"; 
+    #plover-flake.inputs.nixpkgs.follows = "nixpkgs"; 
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, grub2-themes, plover-flake,... }: #GRUB
+  outputs = inputs@{ self, nixpkgs, home-manager, grub2-themes, plover-flake,... }: #GRUB
   let
     system = "x86_64-linux";
   in {
