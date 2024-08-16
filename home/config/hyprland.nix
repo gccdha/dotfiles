@@ -27,6 +27,7 @@
     "$menu"="wofi --show drun -a -I";
     env = [
       "XCURSOR_SIZE,24"
+      "XCURSOR_THEME,breeze"
       "QT_QPA_PLATFORMTHEME,qt6ct"
     ];
 
