@@ -157,7 +157,6 @@
     (inputs.plover-flake.packages.${system}.plover.with-plugins (
       ps: with ps; [
         plover-lapwing-aio
-        plover-uinput
         plover-output-dotool
       ]
     )) 
