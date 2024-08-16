@@ -86,7 +86,7 @@
   };
 
   # Configure console keymap
-  console.keyMap = "dvorak";
+  console.keyMap = "us";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.realram = {
@@ -190,8 +190,9 @@
   services.blueman.enable = true;
 
   services.xserver = {
-    xkb.layout = "us";
-    xkb.variant = "dvorak";                            #set dvorak as keyboard layout
+    xkb.layout = "us,us";
+    xkb.variant = "dvorak,";                           #set dvorak as keyboard layout
+    xkbOptions = "grp:win_space_toggle";
     enable = true;                                     #enable X11
   };
   services.displayManager.sddm = {
