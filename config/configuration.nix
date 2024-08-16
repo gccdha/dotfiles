@@ -192,7 +192,7 @@
   services.xserver = {
     xkb.layout = "us,us";
     xkb.variant = "dvorak,";                           #set dvorak as keyboard layout
-    xkbOptions = "grp:win_space_toggle";
+    xkb.options = "grp:win_space_toggle";
     enable = true;                                     #enable X11
   };
   services.displayManager.sddm = {
