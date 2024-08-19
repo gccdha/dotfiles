@@ -82,7 +82,8 @@
   };
 
   i18n.inputMethod = {
-    enabled = "ibus";
+    type = "ibus";
+    enable = true;
   };
 
   # Configure console keymap
