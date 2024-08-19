@@ -116,7 +116,6 @@
       pkgs.wireplumber        #policy manager for pipewire
       pkgs.brightnessctl      #backlight manager
       pkgs.mpvpaper           #video wallpapers
-      pkgs.hyprpaper          #regular wallpapers
       pkgs.eww                #bar
       pkgs.cava               #audio visualizer
     pkgs.bluez              #bluetooth
