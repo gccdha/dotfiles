@@ -119,9 +119,8 @@
       pkgs.hyprpaper          #regular wallpapers
       pkgs.eww                #bar
       pkgs.cava               #audio visualizer
-      pkgs.hyprlock           #locker
-    
     pkgs.bluez              #bluetooth
+
     pkgs.fastfetch          #neofetch in c
     #vim
     #pkgs.neovim
