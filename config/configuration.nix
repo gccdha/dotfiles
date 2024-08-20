@@ -119,6 +119,7 @@
       pkgs.mpvpaper           #video wallpapers
       pkgs.eww                #bar
       pkgs.cava               #audio visualizer
+      pkgs.hyprpaper          #wallpaper setter
     pkgs.bluez              #bluetooth
 
     pkgs.fastfetch          #neofetch in c

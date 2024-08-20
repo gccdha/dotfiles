@@ -15,6 +15,8 @@
     exec=[
       "swaynm"
       "eww open bar"
+      "hypridle"
+      "swaync"
       ];
     monitor = [
       "eDP-1,2560x1600@165,0x0,1"       #name, resolution, position, scale
@@ -44,10 +46,10 @@
       touchpad = {
         disable_while_typing = "false";
         natural_scroll = "true";
-	scroll_factor = "0.75";
-	clickfinger_behavior = "true"; #2/3 finger right/middle click
-	tap-to-click = "false";
-      };  
+        scroll_factor = "0.75";
+        clickfinger_behavior = "true"; #2/3 finger right/middle click
+         tap-to-click = "false";
+      };
     };
     
     #APPEARANCE RULES
@@ -72,8 +74,8 @@
       dim_strength = "0.2";
       blur = {
         enabled = "true";
-	size = "3";
-	passes = "1";
+        size = "3";
+        passes = "1";
       };
     };
 
@@ -172,4 +174,24 @@
       no_warps = "true";
     };
   };
+
+  # Hypridle config
+  services.hypridle = {
+    enable = true;
+    settings = {
+      general = {
+        lock_cmd = "pidof hyprlock || hyprlock";
+        before_sleep_cmd = "loginctl lock-session";
+        after_sleep_cmd = "hyprctl dispatch dpms on";
+      };
+      listener = [
+        {
+          timeout = 10
+          on-timeout = ".~/.dotfiles"
+        }
+        {}
+      ];
+    };
+  };
+
 }
