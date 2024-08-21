@@ -7,5 +7,7 @@ if [[ "$scripts" != "$$" ]]; then
     fi
   done
 else
+  notify-send "Inhibiting Started"
   systemd-inhibit --what=idle --who=Inhibitor --why="cuz i friggin said so how bout that" sleep infinity
 fi
+notify-send "Inhibiting Stopped"
