@@ -93,6 +93,7 @@
     bind = [
       "$mod, return, exec, $terminal"
       "$mod SHIFT, apostrophe, killactive,"
+      "$mod SHIFT, H, exec, eww kill"
       "$mod SHIFT, period, exit,"
       #add keybind for thunar ($fileManager)
       #add keybinds for sleep/lock (fn+f9) (maybe use l flag)
@@ -180,17 +181,11 @@
     enable = true;
     settings = {
       general = {
-        lock_cmd = "pidof hyprlock || hyprlock";
+        lock_cmd = "script-nolock -l";
         before_sleep_cmd = "loginctl lock-session";
         after_sleep_cmd = "hyprctl dispatch dpms on";
       };
-      listener = [
-        {
-          timeout = 10
-          on-timeout = ".~/.dotfiles"
-        }
-        {}
-      ];
+      listener = [];
     };
   };
 

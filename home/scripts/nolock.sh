@@ -18,12 +18,13 @@ get_val () {
 
 case $1 in
   "-h")
-      echo "nolock.sh"
-      echo "-h  show this help"
-      echo "-e  enable nolock"
-      echo "-d  disable nolock"
-      echo "-t  toggle nolocok"
-      echo "-v  print the current state (0 for off, 1 for on)"
+      echo "=====nolock.sh====="
+      echo " -h  show this help"
+      echo " -e  enable nolock"
+      echo " -d  disable nolock"
+      echo " -t  toggle nolocok"
+      echo " -v  print the current state (0 for off, 1 for on)"
+      echo " -l  lock based on state"
       ;;
   "-e")
     set_file 1
@@ -40,6 +41,12 @@ case $1 in
       set_file 1
     else
       set_file 0
+    fi
+    ;;
+  "-l")
+    current_val=$(get_val)
+    if [[ "$current_val" -eq 0 ]]; then
+      hyprlock
     fi
     ;;
   *)
