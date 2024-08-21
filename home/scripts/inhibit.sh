@@ -1,8 +1,8 @@
 #! /bin/sh
-scripts=$(pidof -x inhibit.sh)
-if [[ $scripts != $$ ]]; then
+scripts=$(pidof -x "$0")
+if [[ "$scripts" != "$$" ]]; then
   for PID in $scripts; do
-    if [[ $PID != $$ ]]; then
+    if [[ "$PID" != "$$" ]]; then
       kill "$PID"
     fi
   done
