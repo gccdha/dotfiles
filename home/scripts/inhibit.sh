@@ -3,7 +3,7 @@ scripts=$(pidof -x inhibit.sh)
 if [[ $scripts != $$ ]]; then
   for PID in $scripts; do
     if [[ $PID != $$ ]]; then
-      kill $PID
+      kill "$PID"
     fi
   done
 else
