@@ -181,11 +181,30 @@
     enable = true;
     settings = {
       general = {
-        lock_cmd = "script-nolock -l";
+        lock_cmd = "pidof hyprlock || hyprlock";
         before_sleep_cmd = "loginctl lock-session";
         after_sleep_cmd = "hyprctl dispatch dpms on";
       };
-      listener = [];
+      listener = [
+        {
+          timeout = 20;
+          on-timeout = "brightnessctl -s set 1";
+          on-resume  = "brightnessctl -r";
+        }
+        {
+          timeout = 300; # 5min
+          on-timeout = "loginctl lock-session";
+        }
+        {
+          timeout = 330; # 5.5min
+          on-timeout = "hyprctl dispatch dpms off";
+          on-resume = "hyprctl dispatch dpms on";
+        }
+        {
+          timeout = 1800; # 30min
+          on-timeout = "systemctl hibernate";
+        }
+      ];
     };
   };
 
