@@ -187,12 +187,12 @@
       };
       listener = [
         {
-          timeout = 20;
-          on-timeout = "brightnessctl -s set 1";
-          on-resume  = "brightnessctl -r";
+          #timeout = 20;
+          #on-timeout = "brightnessctl -s set 1";
+          #on-resume  = "brightnessctl -r";
         }
         {
-          timeout = 300; # 5min
+          timeout = 10; # 5min
           on-timeout = "loginctl lock-session";
         }
         {
