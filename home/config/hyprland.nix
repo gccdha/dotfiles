@@ -192,7 +192,7 @@
           #on-resume  = "brightnessctl -r";
         }
         {
-          timeout = 10; # 5min
+          timeout = 300; # 5min
           on-timeout = "loginctl lock-session";
         }
         {
