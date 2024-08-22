@@ -1,4 +1,13 @@
-#! /bin/sh
+#!/bin/sh
+
+pipe=/tmp/inhibit
+
+# Make the pipe if it does not already exist
+if [[ ! -p $pipe ]]; then
+  mkfifo $pipe
+fi
+
+# If there are already any instances of this program running, kill all of them and then exit
 scripts=$(pidof -x "$0")
 if [[ "$scripts" != "$$" ]]; then
   for PID in $scripts; do
@@ -7,7 +16,11 @@ if [[ "$scripts" != "$$" ]]; then
     fi
   done
 else
+  # Inhibit idle
   notify-send "Inhibiting Started on $0"
+  echo "inhibit" >$pipe
   systemd-inhibit --what=idle --who=Inhibitor --why="cuz i friggin said so how bout that" sleep infinity
 fi
+# Exit program
+echo "noinhibit" >$pipe
 notify-send "Inhibiting Stopped on $0"
