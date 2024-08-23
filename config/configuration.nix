@@ -165,6 +165,7 @@
     pkgs.plymouth        #Bootloader splash and LUKS password customization
     pkgs.whitesur-kde
     pkgs.lutris
+    pkgs.prismlauncher
 ];
 
   fonts.fontconfig.enable = true;
