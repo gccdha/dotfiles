@@ -166,6 +166,7 @@
     pkgs.whitesur-kde
     pkgs.lutris
     pkgs.prismlauncher
+    pkgs.wgcf
 ];
 
   fonts.fontconfig.enable = true;
