@@ -140,6 +140,7 @@
       ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioNext, exec, playerctl next"
       ", XF86AudioPrev, exec, playerctl previous"
+      ", switch:on:Lid Switch, exec, systemctl suspend"
     ];
     bindel = [
       ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+" #increase volume 5% limited to 150%

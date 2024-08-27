@@ -211,7 +211,8 @@
     packages = [ pkgs.qmk-udev-rules ];
     extraRules = ''
       KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
-    ''; #for plover
+      ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="32ac", ATTRS{idProduct}=="0012", ATTR{power/wakeup}="disabled", ATTR{driver/1-1.1.1.4/power/wakeup}="disabled"
+    ''; #for plover and preventing keyboard waking in backpack respectively
   };
   #programs.neovim = { 
   #  enable        = true;
