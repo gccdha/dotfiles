@@ -93,7 +93,7 @@
   users.users.realram = {
     isNormalUser = true;
     description = "realram";
-    extraGroups = [ "networkmanager" "wheel" "audio" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "input" "docker" ];
     packages = [];
   };
 
@@ -286,6 +286,16 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];
+
+  virtualisation.docker = {
+    enable = true;
+    rootless.enable = true;
+    rootless.setSocketVariable = true;
+    daemon.settings = {
+      userland-proxy = false;
+      experimental = true;
+    };
+  };
 
   #programs.nixvim.enable = true;
   #programs.neovim.enable = true;
