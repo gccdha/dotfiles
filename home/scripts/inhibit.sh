@@ -6,7 +6,7 @@ pipe=/tmp/inhibit
 if [[ ! -p $pipe ]]; then
   mkfifo $pipe
 fi
-scripts = $(pidof hypridle)
+scripts=$(pidof hypridle)
 if [[ "$scripts" ]]; then
   systemctl --user stop hypridle
   echo "inhibit" >$pipe
