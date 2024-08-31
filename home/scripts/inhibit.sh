@@ -6,8 +6,9 @@ pipe=/tmp/inhibit
 if [[ ! -p $pipe ]]; then
   mkfifo $pipe
 fi
+
 scripts=$(pidof hypridle)
-if [[ "$scripts" ]]; then
+if [ -n "$scripts" ]; then
   systemctl --user stop hypridle.service
   echo "inhibit" >$pipe
   notify-send -e -t 1000 "Inhibiting Started"
@@ -15,6 +16,7 @@ else
   systemctl --user start hypridle.service
   echo "noinhibit" >$pipe
   notify-send -e -t 1000 "Inhibiting Stopped"
+
 fi
 
 ## If there are already any instances of this program running, kill all of them and then exit
