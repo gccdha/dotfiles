@@ -8,11 +8,11 @@ if [[ ! -p $pipe ]]; then
 fi
 scripts=$(pidof hypridle)
 if [[ "$scripts" ]]; then
-  systemctl --user stop hypridle
+  systemctl --user stop hypridle.service
   echo "inhibit" >$pipe
   notify-send -e -t 1000 "Inhibiting Started"
 else
-  systemctl --user start hypridle
+  systemctl --user start hypridle.service
   echo "noinhibit" >$pipe
   notify-send -e -t 1000 "Inhibiting Stopped"
 fi
