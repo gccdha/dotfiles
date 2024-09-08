@@ -13,9 +13,11 @@
       # add animations here and fine tune them
 
     exec=[
-      "swaynm"
+      #"swaynm"
       "eww open bar"
-      "hypridle"
+      ", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
+      "systemctl --user start hypridle.service"
+
       "swaync"
       ];
     monitor = [
