@@ -168,6 +168,7 @@
     pkgs.lutris
     pkgs.prismlauncher
     pkgs.wgcf
+    pkgs.zathura
 ];
 
   fonts.fontconfig.enable = true;
