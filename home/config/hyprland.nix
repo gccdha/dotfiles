@@ -30,8 +30,8 @@
     "$fileManager" = "thunar";
     "$menu"="wofi --show drun -a -I";
     env = [
-      "XCURSOR_SIZE,24"
-      "XCURSOR_THEME,breeze"
+      "HYPRCURSOR_SIZE,24"
+      "HYPRCURSOR_THEME,sweet-cursors"
       "QT_QPA_PLATFORMTHEME,qt6ct"
     ];
 
