@@ -202,7 +202,7 @@
   services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      theme = "maldives";
+      theme = "WhiteSur";
     };
 
     #windowManager.awesome.enable = true;              #enable awesomewm
