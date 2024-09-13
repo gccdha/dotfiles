@@ -164,7 +164,7 @@
     pkgs.wireguard-tools
     pkgs.pulseaudio      #allows access to pulse audio commands for pipewire
     pkgs.plymouth        #Bootloader splash and LUKS password customization
-    pkgs.whitesur-kde
+    pkgs.sddm-chili-theme
     pkgs.lutris
     pkgs.prismlauncher
     pkgs.wgcf
@@ -202,7 +202,7 @@
   services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      theme = "WhiteSur-dark";
+      theme = "chili";
     };
 
     #windowManager.awesome.enable = true;              #enable awesomewm
