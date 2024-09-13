@@ -4,3 +4,6 @@
 [submodule "plover-flake"]
 	path = plover-flake
 	url = git@github.com:gccdha/plover-flake.git
+[submodule "sddm-chili"]
+	path = sddm-chili
+	url = git@github.com:gccdha/sddm-chili.git

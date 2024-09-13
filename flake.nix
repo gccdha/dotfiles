@@ -14,6 +14,8 @@
     grub2-themes.inputs.nixpkgs.follows = "nixpkgs";
     plover-flake.url = "github:gccdha/plover-flake";        #Plover Plugins (HTF I get work :cry:)
     plover-flake.inputs.nixpkgs.follows = "nixpkgs";
+    sddm-chili.url = "github:gccdha/sddm-chili";
+    sddm-chili.inputs.nixpkgs.follows = "nixpkgs";
     #plover-flake.url = "github:gccdha/plover-wayland-nix"; 
     #plover-flake.inputs.nixpkgs.follows = "nixpkgs"; 
   };
