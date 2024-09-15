@@ -164,7 +164,7 @@
     pkgs.wireguard-tools
     pkgs.pulseaudio      #allows access to pulse audio commands for pipewire
     pkgs.plymouth        #Bootloader splash and LUKS password customization
-    inputs.sddm-chili.packages.${system}.sddm-chili
+    #inputs.sddm-chili.packages.${system}.sddm-chili
     pkgs.lutris
     pkgs.prismlauncher
     pkgs.wgcf
