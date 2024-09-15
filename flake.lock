@@ -524,11 +524,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1726365321,
-        "narHash": "sha256-U6Xf6RZUnl957jKQmPwgLj/iIZjtO+zZGIajT1VmBh8=",
+        "lastModified": 1726373704,
+        "narHash": "sha256-v7l2sG5mmB271BooBmGIBeFb4iooOgmQ+78lQzDiSAQ=",
         "owner": "gccdha",
         "repo": "sddm-chili",
-        "rev": "123d93a48b39f11c907accba82b720d83b62c06d",
+        "rev": "32e929f726119c710d738b1dcfec8abc5d3d9bd7",
         "type": "github"
       },
       "original": {

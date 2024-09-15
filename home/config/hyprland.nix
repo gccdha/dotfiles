@@ -32,6 +32,8 @@
     env = [
       "HYPRCURSOR_SIZE,24"
       "HYPRCURSOR_THEME,sweet-cursors"
+      "XCURSOR_SIZE,24"
+      "XCURSOR_THEME,xsweet-cursors"
       "QT_QPA_PLATFORMTHEME,qt6ct"
     ];
 
