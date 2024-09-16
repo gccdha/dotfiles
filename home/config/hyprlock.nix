@@ -17,5 +17,14 @@
       blur_passes = 3;
       blur_size = 8;
     };
+
+    label = {
+      text="$TIME";
+      text_align = "center";
+      color = "rgba(220, 220, 220, 0.9)";
+      font_size = 30;
+      font_family = "Noto Sans";
+      rotate = 0;
+    };
   };
 }
