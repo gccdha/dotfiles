@@ -22,9 +22,13 @@
       text="$TIME";
       text_align = "center";
       color = "rgba(220, 220, 220, 0.9)";
-      font_size = 30;
+      font_size = 70;
       font_family = "Noto Sans";
-      rotate = 0;
+      rotate = 15;
+
+      position = "0, 80";
+      halign = "center";
+      valign = "center";
     };
   };
 }
