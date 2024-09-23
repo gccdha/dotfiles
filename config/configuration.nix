@@ -140,7 +140,7 @@
       #gvfs               #extends thunar functionality
       #xfce.xfconf        #makes gvfs work
     #xorg.xbacklight    #backlight adjustment  
-    pkgs.tlp                #battery management
+    #pkgs.tlp                #battery management
     pkgs.powertop
     pkgs.maple-mono-NF      #Font for stuff
     pkgs.steam              #gmaes
@@ -229,21 +229,23 @@
   #  useGlobalPkgs = true;
   #};
 
-  services.tlp = {
-    enable = true;
-    settings = {
-      RADEON_DPM_STATE_ON_AC="performance";
-      RADEON_DPM_STATE_ON_BAT="battery";
-      NMI_WATCHDOG=0;                      #could cause problems with debugging kernel stuff and watchdog daemon
-      PLATFORM_PROFILE_ON_AC="performance";
-      PLATFORM_PROFILE_ON_BAT="low-power";
-      MEM_SLEEP_ON_AC="s2idle";
-      MEM_SLEEP_ON_BAT="deep";
-      CPU_SCALING_GOVERNOR_ON_AC="performance";
-      CPU_SCALING_GOVERNOR_ON_BAT="powersave";
-      CPU_ENERGY_PERF_POLICY_ON_BAT="power";
-    };
-  };
+  services.power-profiles-daemon.enable = true;
+
+  #services.tlp = {
+  #  enable = true;
+  #  settings = {
+  #    RADEON_DPM_STATE_ON_AC="performance";
+  #    RADEON_DPM_STATE_ON_BAT="battery";
+  #    NMI_WATCHDOG=0;                      #could cause problems with debugging kernel stuff and watchdog daemon
+  #    PLATFORM_PROFILE_ON_AC="performance";
+  #    PLATFORM_PROFILE_ON_BAT="low-power";
+  #    MEM_SLEEP_ON_AC="s2idle";
+  #    MEM_SLEEP_ON_BAT="deep";
+  #    CPU_SCALING_GOVERNOR_ON_AC="performance";
+  #    CPU_SCALING_GOVERNOR_ON_BAT="powersave";
+  #    CPU_ENERGY_PERF_POLICY_ON_BAT="power";
+  #  };
+  #};
 
   services.pipewire = {
     enable = true;
