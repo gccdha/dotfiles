@@ -189,8 +189,15 @@
 
   # List services that you want to enable:
 
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+      };
+    };
+  };
   services.blueman.enable = true;
 
   services.xserver = {
