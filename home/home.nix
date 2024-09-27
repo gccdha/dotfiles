@@ -1,7 +1,7 @@
 { config, pkgs, inputs, system, ... }: {
   imports = [
     ./config
-    ./scripts
+    ./scripts 
   ];
   home = {
     username = "realram";

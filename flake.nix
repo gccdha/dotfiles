@@ -16,11 +16,13 @@
     plover-flake.inputs.nixpkgs.follows = "nixpkgs";
     sddm-chili.url = "github:gccdha/sddm-chili";
     sddm-chili.inputs.nixpkgs.follows = "nixpkgs";
+    nix-colors.url = "github:Misterio77/nix-colors";
+    nix-colors.inputs.nixpkgs.follows = "nixpkgs";
     #plover-flake.url = "github:gccdha/plover-wayland-nix"; 
     #plover-flake.inputs.nixpkgs.follows = "nixpkgs"; 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, grub2-themes, ... }: #GRUB
+  outputs = inputs@{ self, nixpkgs, home-manager, grub2-themes, nix-colors, ... }: #GRUB
   let
     system = "x86_64-linux";
   in {
@@ -28,7 +30,7 @@
     # nixosConfigurations."<hostname>".config.system.build.toplevel must be a derivation
     nixosConfigurations = {
       FW16 = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs system; };
+        specialArgs = { inherit inputs system nix-colors; };
         modules = [
             ./config/configuration.nix
             home-manager.nixosModules.home-manager {
