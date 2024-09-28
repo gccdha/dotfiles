@@ -1,11 +1,24 @@
-{ config, pkgs, inputs, system, ... }: {
+{ config, pkgs, inputs, system, nix-colors, ... }: 
+
+let
+  nix-colors-lib = nix-colors.lib.contrib { inherit pkgs; };
+  in {
+  wallpaper = nix-colors-lib.nixWallpaperFromScheme {
+    scheme = config.colorScheme;
+    width = 2560;
+    height = 1600;
+    logoScale = 1.0;
+  };
+
   imports = [
     ./config
     ./scripts
-    inputs.nix-colors.homeManagerModules.default
+    nix-colors.homeManagerModules.default
   ];
 
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+  colorScheme = nix-colors.colorSchemes.gruvbox-dark-medium;
+    
+  
 
   home = {
     username = "realram";
