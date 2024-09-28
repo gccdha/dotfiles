@@ -2,7 +2,7 @@
   imports = [
     ./config
     ./scripts
-    nix-colors.homeManagerModule.default
+    nix-colors.homeManagerModule
   ];
 
   colorScheme = nix-colors.colorSchemes.gruvbox-dark-medium;
