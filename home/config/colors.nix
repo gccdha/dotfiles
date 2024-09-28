@@ -4,7 +4,6 @@ let
   nix-colors-lib = nix-colors.lib.contrib { inherit pkgs; };
 in {
   colorScheme = nix-colors-lib.nixWallpaperFromScheme {
-    path = ./wallpapers/example.png;
       scheme = config.colorScheme;
       width = 2560;
       height = 1080;
