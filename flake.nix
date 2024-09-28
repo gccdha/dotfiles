@@ -17,7 +17,7 @@
     sddm-chili.url = "github:gccdha/sddm-chili";
     sddm-chili.inputs.nixpkgs.follows = "nixpkgs";
     nix-colors.url = "github:Misterio77/nix-colors";
-    nix-colors.inputs.nixpkgs.follows = "nixpkgs";
+    #nix-colors.inputs.nixpkgs.follows = "nixpkgs";
     #plover-flake.url = "github:gccdha/plover-wayland-nix"; 
     #plover-flake.inputs.nixpkgs.follows = "nixpkgs"; 
   };
