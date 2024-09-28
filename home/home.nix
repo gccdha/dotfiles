@@ -1,11 +1,11 @@
-{ config, pkgs, inputs, system, nix-colors, ...}: {
+{ config, pkgs, inputs, system, ...}: {
   imports = [
     ./config
     ./scripts
-    nix-colors.homeManagerModules.default
+    inputs.nix-colors.homeManagerModule.default
   ];
 
-  colorScheme = nix-colors.colorSchemes.gruvbox-dark-medium;
+  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
   home = {
     username = "realram";
