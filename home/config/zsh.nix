@@ -26,6 +26,7 @@
           owner = "romkatv";
           repo = "powerlevel10k";
           rev = "v1.20.0";
+          sha256 = "d8187d44b697b3a37a8c4896678b4380e717cbf2850179529358348780a2d3d7";
         };
       }
     ];
