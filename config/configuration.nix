@@ -91,6 +91,7 @@
   console.keyMap = "dvorak";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.defaultUserShell = pkgs.zsh;
   users.users.realram = {
     isNormalUser = true;
     description = "realram";
@@ -169,6 +170,8 @@
     pkgs.prismlauncher
     pkgs.wgcf
     pkgs.zathura
+    pkgs.digikam
+    pkgs.kitty
 ];
 
   fonts.fontconfig.enable = true;
@@ -307,6 +310,10 @@
       experimental = true;
     };
   };
+
+
+  programs.zsh.enable = true;
+
 
   #programs.nixvim.enable = true;
   #programs.neovim.enable = true;
