@@ -18,5 +18,10 @@
       ignoreDups = true;
       ignoreSpace = true;
     };
+
+    plugins = [
+      pkgs.zsh-powerlevel10k
+    ];
+
   };
 }
