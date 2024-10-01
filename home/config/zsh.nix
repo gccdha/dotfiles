@@ -20,7 +20,10 @@
     };
 
     plugins = [
-      pkgs.zsh-powerlevel10k
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+      }
     ];
 
   };
