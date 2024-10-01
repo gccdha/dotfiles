@@ -22,7 +22,11 @@
     plugins = [
       {
         name = "powerlevel10k";
-        src = pkgs.zsh-powerlevel10k;
+        src = pkgs.fetchFromGitHub {
+          owner = "romkatv";
+          repo = "powerlevel10k";
+          rev = "v1.20.0";
+        };
       }
     ];
 
