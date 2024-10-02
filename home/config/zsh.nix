@@ -19,15 +19,16 @@
       ignoreSpace = true;
     };
 
-    plugins = [
+    plugins = with pkgs; [
       {
         name = "powerlevel10k";
-        src = pkgs.fetchFromGitHub {
+        src = fetchFromGitHub {
           owner = "romkatv";
           repo = "powerlevel10k";
           rev = "087405df7838f4c3e835025699bd7b98b9731acc";
           sha256 = "115b23nzndd93ixhh6mykfmyjxcxpqyfrqmsdbkignxlwmzwv3kh";
         };
+      file="powerlevel10k.zsh-theme";
       }
     ];
 
