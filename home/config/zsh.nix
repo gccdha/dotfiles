@@ -19,6 +19,10 @@
       ignoreSpace = true;
     };
 
+    initExtra = ''
+      source ~/.config/zsh/.p10k.zsh
+    '';
+
     plugins = with pkgs; [
       {
         name = "powerlevel10k";
