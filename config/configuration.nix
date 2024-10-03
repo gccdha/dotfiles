@@ -172,6 +172,7 @@
     pkgs.zathura
     pkgs.digikam
     pkgs.kitty
+    pkgs.postman
 ];
 
   fonts.fontconfig.enable = true;
@@ -313,6 +314,7 @@
 
 
   programs.zsh.enable = true;
+
 
 
   #programs.nixvim.enable = true;
