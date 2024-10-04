@@ -173,6 +173,15 @@
     pkgs.digikam
     pkgs.kitty
     pkgs.postman
+
+    pkgs.btop
+    pkgs.atuin
+    pkgs.fzf
+    pkgs.bat
+    pkgs.eza
+    pkgs.ncdu
+    pkgs.zellij
+
 ];
 
   fonts.fontconfig.enable = true;

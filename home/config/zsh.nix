@@ -8,6 +8,10 @@
     autocd = true;
     dotDir = ".config/zsh";
 
+    shellAliases = {
+      
+    };
+
     history = {
       size = 10000;
       save = 10000;
