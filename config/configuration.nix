@@ -181,6 +181,7 @@
     pkgs.eza
     pkgs.ncdu
     pkgs.zellij
+    pkgs.mathematica
 
 ];
 
