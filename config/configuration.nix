@@ -181,8 +181,7 @@
     pkgs.eza
     pkgs.ncdu
     pkgs.zellij
-    pkgs.mathematica
-
+    pkgs.sage
 ];
 
   fonts.fontconfig.enable = true;
