@@ -22,9 +22,10 @@
       "eww open bar"
       ", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
       "systemctl --user start hypridle.service"
-
+      "hyprpaper"
       "swaync"
       ];
+      
     monitor = [
       "eDP-1,2560x1600@165,0x0,1"       #name, resolution, position, scale
       ",preferred,auto,1"#,mirror,eDP-1 #extra display: uncomment for mirror
