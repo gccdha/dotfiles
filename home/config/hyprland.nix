@@ -1,4 +1,9 @@
 { ... }: {
+  services.hyprpaper.enable = true;
+  services.hyprpaper.settings = {
+    preload = ["~/Pictures/Wallpaper/dolomites.jpg"];
+    wallpaper = ", ~/Pictures/Wallpaper/dolomites.jpg";
+  };
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
       # ==========GENERAL=TODO================
