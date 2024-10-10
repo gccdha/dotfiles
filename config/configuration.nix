@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       #<home-manager/nixos>
       ./secrets.nix #Time Zone, wg-key
+      ./import
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
