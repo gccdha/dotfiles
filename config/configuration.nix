@@ -142,6 +142,7 @@
     pkgs.ncdu
     pkgs.zellij
     pkgs.sage
+    pkgs.lumafly
 ];
 
   fonts.fontconfig.enable = true;

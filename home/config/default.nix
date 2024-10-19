@@ -4,8 +4,8 @@
     ./hyprlock.nix
     ./xdg_config.nix
     ./zsh.nix
-    ./colors.nix
-    ./colorconfig.nix
+    #./colors.nix
+    #./colorconfig.nix
     #./colors
   ];
 }
