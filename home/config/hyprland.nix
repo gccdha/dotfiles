@@ -22,7 +22,6 @@
       "eww open bar"
       ", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
       "systemctl --user start hypridle.service"
-      "hyprpaper"
       "swaync"
       ];
       
