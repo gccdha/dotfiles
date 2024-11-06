@@ -143,7 +143,8 @@
     pkgs.zellij
     pkgs.sage
     pkgs.lumafly
-    pkgs.tor
+    pkgs.tor-browser
+    pkgs.protonvpn-gui
 ];
 
   fonts.fontconfig.enable = true;
