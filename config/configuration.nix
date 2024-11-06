@@ -143,6 +143,7 @@
     pkgs.zellij
     pkgs.sage
     pkgs.lumafly
+    pkgs.tor
 ];
 
   fonts.fontconfig.enable = true;
