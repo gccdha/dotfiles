@@ -156,8 +156,10 @@
 
   fonts.fontconfig.enable = true;
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "CascadiaCode" "NerdFontsSymbolsOnly" "Monaspace" ]; })
+  fonts.packages = with pkgs.nerd-fonts; [
+    CascadiaCode
+    NerdFontsSymbolsOnly
+    Monaspace
   ];
 
 	
