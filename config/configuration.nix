@@ -148,7 +148,7 @@
     pkgs.eza
     pkgs.ncdu
     pkgs.zellij
-    pkgs.sage
+    #pkgs.sage    # problems with test cases entering infinite loop
     pkgs.lumafly
     pkgs.tor-browser
     pkgs.protonvpn-gui
@@ -156,10 +156,10 @@
 
   fonts.fontconfig.enable = true;
 
-  fonts.packages = with pkgs.nerd-fonts; [
-    CascadiaCode
-    NerdFontsSymbolsOnly
-    Monaspace
+  fonts.packages = with pkgs; [
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.symbols-only
+    nerd-fonts.monaspace
   ];
 
 	
