@@ -7,7 +7,7 @@
   # enable discovery
   services.avahi = {
     enable = true;
-    nssmdns = true; #printing
+    nssmdns4 = true; #printing
     openFirewall = true; #make sure they are open
     publish = {
       enable = true;

@@ -64,6 +64,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-runtime-wrapped-7.0.20"
+  ];
+
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
