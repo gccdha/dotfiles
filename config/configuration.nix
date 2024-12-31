@@ -64,12 +64,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-runtime-wrapped-7.0.20"
-    "dotnet-runtime-7.0.20"
-    "dotnet-sdk-wrapped-7.0.410"
-    "dotnet-sdk-7.0.410"
-  ];
+  #  nixpkgs.config.permittedInsecurePackages = [
+  #    "dotnet-runtime-wrapped-7.0.20"
+  #    "dotnet-runtime-7.0.20"
+  #    "dotnet-sdk-wrapped-7.0.410"
+  #    "dotnet-sdk-7.0.410"
+  #  ];
 
 
   # List packages installed in system profile. To search, run:
