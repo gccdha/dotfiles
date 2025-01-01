@@ -152,8 +152,8 @@
     pkgs.lumafly
     pkgs.tor-browser
     pkgs.protonvpn-gui
-    pkgs.taskwarrior
-    pkgs.timewarrior
+    #pkgs.taskwarrior
+    #pkgs.timewarrior
 ];
 
   fonts.fontconfig.enable = true;
