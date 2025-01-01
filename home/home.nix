@@ -10,7 +10,10 @@
   home = {
     username = "realram";
     homeDirectory = "/home/realram";
-    packages = [];
+    packages = [
+      pkgs.taskwarrior3
+      pkgs.timewarrior
+    ];
     stateVersion = "23.11"; #no touchy touchy
   };
 }
