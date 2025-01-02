@@ -1,4 +1,13 @@
 {inputs, pkgs, system, ...}:{
+
+  nixpkgs.config.allowUnfree = false;
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "obsidian"
+      "spotify"
+      "steam"
+      "discord"
+      
+    ];
   environment.systemPackages = [
     pkgs.git # install first for flakes
 
