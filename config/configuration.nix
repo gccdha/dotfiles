@@ -132,7 +132,7 @@
     pkgs.wireguard-tools
     pkgs.pulseaudio      #allows access to pulse audio commands for pipewire
     pkgs.plymouth        #Bootloader splash and LUKS password customization
-    inputs.sddm-chili.packages.${system}.sddm-chili
+    #inputs.sddm-chili.packages.${system}.sddm-chili
     pkgs.lutris
     pkgs.prismlauncher
     pkgs.wgcf
@@ -154,6 +154,7 @@
     pkgs.protonvpn-gui
     pkgs.taskwarrior3
     pkgs.timewarrior
+    pkgs.greetd.tuigreet
 ];
 
   fonts.fontconfig.enable = true;
@@ -193,11 +194,12 @@
     xkb.options = "grp:win_space_toggle";
     enable = true;                                     #enable X11
   };
-  services.displayManager.sddm = {
-      enable = true;
-      wayland.enable = false;
-      theme = "chili";
-    };
+
+  # services.displayManager.sddm = {
+  #     enable = true;
+  #     wayland.enable = false;
+  #     theme = "chili";
+  #   };
 
     #windowManager.awesome.enable = true;              #enable awesomewm
     #displayManager.defaultSession = "none+awesome";   #set default session to no wm or awesome (TODO) is this required?
