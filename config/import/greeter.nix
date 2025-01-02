@@ -1,25 +1,21 @@
-{ config, pkgs, ...}:
+{...}:
 {
-  services.greetd = {
+  # services.greetd = {
+  #   enable = true;
+  #   settings = {
+  #     default_session = {
+  #       command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
+  #       user = "realram";
+  #     };
+  #   };
+  # };
+  services.displayManager.sddm = {
     enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session";
-        user = "realram";
-      };
-    };
+    wayland.enable = true;
+    theme = "chili";
   };
 
-  programs.uwsm = {
-    enable = true;
-    waylandCompositors = {
-      hyprland = {
-        prettyName = "Hyprland";
-        comment = "Hyprland (managed by UWSM)";
-        binPath = "/run/current-system/sw/bin/Hyprland";
-      };
-    };
-  };
-
+  #enable hyprland support for Universal Wayland Session Manager
+  #the wayland modules will do the rest of the work (exept the HM stuff)
   programs.hyprland.withUWSM = true;
 }
