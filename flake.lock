@@ -548,8 +548,7 @@
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs",
         "nixvim-flake": "nixvim-flake",
-        "plover-flake": "plover-flake",
-        "sddm-chili": "sddm-chili"
+        "plover-flake": "plover-flake"
       }
     },
     "rtf-tokenize": {
@@ -565,26 +564,6 @@
       "original": {
         "owner": "openstenoproject",
         "repo": "rtf_tokenize",
-        "type": "github"
-      }
-    },
-    "sddm-chili": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1726373704,
-        "narHash": "sha256-v7l2sG5mmB271BooBmGIBeFb4iooOgmQ+78lQzDiSAQ=",
-        "owner": "gccdha",
-        "repo": "sddm-chili",
-        "rev": "32e929f726119c710d738b1dcfec8abc5d3d9bd7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "gccdha",
-        "repo": "sddm-chili",
         "type": "github"
       }
     },
