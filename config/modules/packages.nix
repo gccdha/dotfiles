@@ -1,4 +1,4 @@
-{inputs, pkgs, system, ...}:{
+{inputs, lib, pkgs, system, ...}:{
 
   nixpkgs.config.allowUnfree = false;
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
