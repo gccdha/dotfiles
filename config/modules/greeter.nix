@@ -17,5 +17,5 @@
 
   #enable hyprland support for Universal Wayland Session Manager
   #the wayland modules will do the rest of the work (exept the HM stuff)
-  programs.hyprland.withUWSM = true;
+  programs.hyprland.withUWSM = false;
 }
