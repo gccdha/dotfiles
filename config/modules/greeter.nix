@@ -11,7 +11,7 @@
   # };
   services.displayManager.sddm = {
     enable = true;
-    wayland.compositor = "weston";
+    wayland.compositor = "kwin";
     wayland.enable = true;
     theme = "chili";
   };
