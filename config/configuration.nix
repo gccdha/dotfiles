@@ -75,89 +75,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
-  environment.systemPackages = [
-    pkgs.git                #installed first bc flakes needs it
-   # home-manager       #declaratively configure dotfiles
-    pkgs.awesome            #x11 WM
-    pkgs.hyprland           #wayland WM
-      pkgs.wofi               #launcher
-      pkgs.swaynotificationcenter#notifications
-      	pkgs.libnotify
-      pkgs.wireplumber        #policy manager for pipewire
-      pkgs.brightnessctl      #backlight manager
-      pkgs.mpvpaper           #video wallpapers
-      pkgs.eww                #bar
-      pkgs.cava               #audio visualizer
-      pkgs.hyprpaper          #wallpaper setter
-    pkgs.bluez              #bluetooth
-
-    pkgs.fastfetch          #neofetch in c
-    #vim
-    #pkgs.neovim
-    pkgs.wget               #get webpage content and download stuff etc
-    pkgs.firefox
-    pkgs.spotify
-      pkgs.spotifyd           #spotify
-    #python3
-      #python311Packages.pyserial
-    pkgs.qmk                #keyboard rgb stuff
-    pkgs.qmk-udev-rules   #needed for flashing to work w/out sudo
-    pkgs.zsh                #z shell
-    pkgs.alacritty          #terminal
-    pkgs.xfce.thunar        #gui file manager
-      #gvfs               #extends thunar functionality
-      #xfce.xfconf        #makes gvfs work
-    #xorg.xbacklight    #backlight adjustment  
-    #pkgs.tlp                #battery management
-    pkgs.powertop
-    pkgs.maple-mono-NF      #Font for stuff
-    pkgs.steam              #gmaes
-    pkgs.vscodium           #IDE
-    pkgs.vlc                #video player
-    pkgs.socat              #socket stuff
-    pkgs.playerctl          #for media key and metadata stuff
-    pkgs.gcc                #gcc compiler
-    pkgs.cjson            #json parsing library
-    pkgs.obsidian           #MD editor
-    pkgs.fprintd            #fingerprint stuff
-    pkgs.imagemagick
-    pkgs.discord
-    inputs.nixvim-flake.packages.${system}.default
-    (inputs.plover-flake.packages.${system}.plover.with-plugins (
-      ps: with ps; [
-        plover-lapwing-aio
-        plover-output-dotool
-      ]
-    )) 
-    pkgs.wireguard-tools
-    pkgs.pulseaudio      #allows access to pulse audio commands for pipewire
-    pkgs.plymouth        #Bootloader splash and LUKS password customization
-    inputs.sddm-chili.packages.${system}.sddm-chili
-    pkgs.lutris
-    pkgs.prismlauncher
-    pkgs.wgcf
-    pkgs.zathura
-    pkgs.digikam
-    pkgs.kitty
-    #pkgs.postman
-
-    pkgs.btop
-    pkgs.atuin
-    pkgs.fzf
-    pkgs.bat
-    pkgs.eza
-    pkgs.ncdu
-    pkgs.zellij
-    #pkgs.sage    # problems with test cases entering infinite loop
-    pkgs.lumafly
-    pkgs.tor-browser
-    #pkgs.protonvpn-gui
-    pkgs.taskwarrior3
-    pkgs.timewarrior
-    #pkgs.greetd.tuigreet
-    pkgs.uwsm
-];
-
   fonts.fontconfig.enable = true;
 
   fonts.packages = with pkgs; [
@@ -277,15 +194,15 @@
 #  systemd.network.wait-online.enable = false;
 #  boot.initrd.systemd.network.wait-online.enable = false;
 
-  services.fprintd = {
-    enable = true;
+  #services.fprintd = {
+  #  enable = true;
   #  tod.enable = true;
   #  tod.driver = pkgs.libfprint-2-tod1-goodix;
-  };
+  #};
   programs.hyprlock.enable = true;
-  security.pam.services.hyprlock = {
-    fprintAuth = true;
-  };
+  #security.pam.services.hyprlock = {
+  #  fprintAuth = true;
+  #};
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];
