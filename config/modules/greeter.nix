@@ -13,8 +13,10 @@
     enable = true;
     wayland.compositor = "kwin";
     wayland.enable = true;
-    theme = "chili";
+    theme = "sddm-astronaut-theme";
   };
+
+  services.displayManager.defaultSession = "Hyprland";
 
   #enable hyprland support for Universal Wayland Session Manager
   #the wayland modules will do the rest of the work (exept the HM stuff)
