@@ -289,11 +289,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1735834308,
-        "narHash": "sha256-dklw3AXr3OGO4/XT1Tu3Xz9n/we8GctZZ75ZWVqAVhk=",
+        "lastModified": 1736012469,
+        "narHash": "sha256-/qlNWm/IEVVH7GfgAIyP6EsVZI6zjAx1cV5zNyrs+rI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6df24922a1400241dae323af55f30e4318a6ca65",
+        "rev": "8f3e1f807051e32d8c95cd12b9b421623850a34d",
         "type": "github"
       },
       "original": {
@@ -575,11 +575,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1736143715,
-        "narHash": "sha256-R1QdDGdM+x733XneGT2XOiddn9f94w+2YVn54NBO1RQ=",
+        "lastModified": 1736146315,
+        "narHash": "sha256-BL/dv63Jmb+2mOgLTPV50CZGxdDGZb7unAkuXz293m4=",
         "owner": "gccdha",
         "repo": "sddm-astronaut-theme",
-        "rev": "2786a08c3d9a1506a6dfac1e7213bbeb14680bf9",
+        "rev": "2d08bdb6738fe3c94cbc12fa129e88c4d7cad119",
         "type": "github"
       },
       "original": {
