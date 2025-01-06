@@ -15,6 +15,9 @@
     wayland.enable = true;
     theme = "sddm-astronaut-theme";
     package = pkgs.kdePackages.sddm;
+    extraPackages = [
+      pkgs.kdePackages.qt5compat
+    ];
   };
 
   services.displayManager.defaultSession = "hyprland";
