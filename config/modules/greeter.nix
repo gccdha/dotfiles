@@ -11,9 +11,9 @@
   # };
   services.displayManager.sddm = {
     enable = true;
-    wayland.compositor = "kwin";
+    #wayland.compositor = "kwin";
     wayland.enable = true;
-    theme = "sddm-astro";
+    theme = "sddm-astronaut-theme";
     package = pkgs.kdePackages.sddm;
   };
 
