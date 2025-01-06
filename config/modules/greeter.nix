@@ -16,7 +16,7 @@
     theme = "sddm-astronaut-theme";
   };
 
-  services.displayManager.defaultSession = "Hyprland";
+  services.displayManager.defaultSession = "hyprland";
 
   #enable hyprland support for Universal Wayland Session Manager
   #the wayland modules will do the rest of the work (exept the HM stuff)
