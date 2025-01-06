@@ -575,11 +575,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1736146315,
-        "narHash": "sha256-BL/dv63Jmb+2mOgLTPV50CZGxdDGZb7unAkuXz293m4=",
+        "lastModified": 1736146433,
+        "narHash": "sha256-XntzFuAOPZZKGl7//wP2oRApMhO8DoFmOldOPr6zvPk=",
         "owner": "gccdha",
         "repo": "sddm-astronaut-theme",
-        "rev": "2d08bdb6738fe3c94cbc12fa129e88c4d7cad119",
+        "rev": "b5aa1aa1a95e3b4f3a6b9c6b553242ff8225f5ea",
         "type": "github"
       },
       "original": {
