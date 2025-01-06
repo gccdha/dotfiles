@@ -211,11 +211,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1735947440,
-        "narHash": "sha256-jnEcfmOhWntmVEcqlvs+j532+mvmgsKtQSSfukgkn+A=",
+        "lastModified": 1736089250,
+        "narHash": "sha256-/LPWMiiJGPHGd7ZYEgmbE2da4zvBW0acmshUjYC3WG4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a9987622b7b93c82e147f198574e8e6ffbf5e327",
+        "rev": "172b91bfb2b7f5c4a8c6ceac29fd53a01ef07196",
         "type": "github"
       },
       "original": {
@@ -549,7 +549,7 @@
         "nixpkgs": "nixpkgs",
         "nixvim-flake": "nixvim-flake",
         "plover-flake": "plover-flake",
-        "sddm-chili": "sddm-chili"
+        "sddm-astro": "sddm-astro"
       }
     },
     "rtf-tokenize": {
@@ -568,23 +568,23 @@
         "type": "github"
       }
     },
-    "sddm-chili": {
+    "sddm-astro": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1726373704,
-        "narHash": "sha256-v7l2sG5mmB271BooBmGIBeFb4iooOgmQ+78lQzDiSAQ=",
+        "lastModified": 1736132411,
+        "narHash": "sha256-7hYdXx/D8lpOPZnpL1wwVFlOUxxIRrNDb6qNjlYthJ0=",
         "owner": "gccdha",
-        "repo": "sddm-chili",
-        "rev": "32e929f726119c710d738b1dcfec8abc5d3d9bd7",
+        "repo": "sddm-astronaut-theme",
+        "rev": "d9927032db8b284fd1d45535ee315b8f18db0a4f",
         "type": "github"
       },
       "original": {
         "owner": "gccdha",
-        "repo": "sddm-chili",
+        "repo": "sddm-astronaut-theme",
         "type": "github"
       }
     },

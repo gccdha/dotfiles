@@ -60,7 +60,7 @@
     pkgs.fastfetch              #neofetch
     pkgs.plymouth               #Bootloader splashscreen
     #                           #sddm and theme
-    inputs.sddm-chili.packages.${system}.sddm-chili
+    inputs.sddm-astro.packages.${system}.sddm-astro
 
     # pkgs.greetd.tuigreet        #tui sddm alternative
     # pkgs.mpvpaper               #video wallpapers

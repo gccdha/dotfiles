@@ -7,3 +7,6 @@
 [submodule "sddm-chili"]
 	path = sddm-chili
 	url = git@github.com:gccdha/sddm-chili.git
+[submodule "sddm-astronaut-theme"]
+	path = sddm-astronaut-theme
+	url = git@github.com:gccdha/sddm-astronaut-theme.git
