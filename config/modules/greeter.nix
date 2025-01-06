@@ -13,10 +13,11 @@
     enable = true;
     #wayland.compositor = "kwin";
     wayland.enable = true;
-    theme = "sddm-astronaut-theme";
+    theme = "sddm-astro";
     package = pkgs.kdePackages.sddm;
     extraPackages = [
       pkgs.kdePackages.qt5compat
+      pkgs.qt6Packages.qtmultimedia
     ];
   };
 
