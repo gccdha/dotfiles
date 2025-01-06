@@ -1,4 +1,4 @@
-{...}:
+{pkgs,...}:
 {
   # services.greetd = {
   #   enable = true;
@@ -14,6 +14,7 @@
     wayland.compositor = "kwin";
     wayland.enable = true;
     theme = "sddm-astronaut-theme";
+    package = pkgs.kdePackages.sddm;
   };
 
   services.displayManager.defaultSession = "hyprland";
