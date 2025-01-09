@@ -3,9 +3,9 @@
   nixpkgs.config.allowUnfree = false;
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
       "obsidian"
-      "spotify"
       "steam"
-      "discord"
+    #"spotify"
+    #"discord"
       
     ];
   environment.systemPackages = [
@@ -16,7 +16,6 @@
 
     #-----Applications-----
     pkgs.firefox                #web browser
-    pkgs.spotify                #music
     pkgs.alacritty              #terminal
     pkgs.kitty                  #terminal
     pkgs.xfce.thunar            #GUI file explorer
@@ -24,7 +23,7 @@
     pkgs.vscodium               #GUI IDE
     pkgs.vlc                    #Audio/Video player
     pkgs.obsidian               #Markdown notetaking
-    pkgs.discord                #Message client
+    pkgs.vesktop                #discord client
     #                           #Neovim (nixvim flake)
     inputs.nixvim-flake.packages.${system}.default
     pkgs.lutris                 #game compat (for trackmania)
@@ -36,7 +35,9 @@
     pkgs.timewarrior            #cli time trackr
     # pkgs.sage                   #cli math engine
 
-
+    
+    # pkgs.discord                #Message client
+    # pkgs.spotify                #music
     # pkgs.postman                #API tester
     # pkgs.digikam                #image library manager
     # #                           #plover stenography 
