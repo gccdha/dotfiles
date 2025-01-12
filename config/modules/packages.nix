@@ -33,6 +33,7 @@
     pkgs.tor-browser            #TOR browser
     pkgs.taskwarrior3           #cli task manager
     pkgs.timewarrior            #cli time trackr
+    pkgs.everest-mons           #celeste mod manager
     # pkgs.sage                   #cli math engine
 
     
