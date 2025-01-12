@@ -34,7 +34,7 @@
     pkgs.taskwarrior3           #cli task manager
     pkgs.timewarrior            #cli time trackr
     pkgs.everest-mons           #celeste mod manager
-      pkgs.icu                  #unicode library
+    #   pkgs.icu                  #unicode library
     # pkgs.sage                   #cli math engine
 
     
