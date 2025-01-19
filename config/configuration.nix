@@ -220,6 +220,9 @@
 
   programs.zsh.enable = true;
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "realram" ];
+
 
 
   #programs.nixvim.enable = true;
