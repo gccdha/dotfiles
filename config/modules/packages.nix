@@ -33,7 +33,8 @@
     pkgs.tor-browser            #TOR browser
     pkgs.taskwarrior3           #cli task manager
     pkgs.timewarrior            #cli time trackr
-    pkgs.everest-mons           #celeste mod manager
+
+    #pkgs.everest-mons           #celeste mod manager
     #   pkgs.icu                  #unicode library
     # pkgs.sage                   #cli math engine
 
@@ -75,6 +76,7 @@
     pkgs.playerctl              #controls for media
     pkgs.imagemagick            #image manipulation tool
     pkgs.pulseaudio             #enables access to pulse audio commands for pipewire
+    pkgs.feh                    #simple image viewer
 
     #-----Utilities---
     pkgs.bluez                  #bluetooth
