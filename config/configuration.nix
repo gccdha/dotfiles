@@ -208,7 +208,7 @@
   programs.nix-ld.libraries = with pkgs; [];
 
   virtualisation.docker = {
-    enable = false;
+    enable = true;
     rootless.enable = true;
     rootless.setSocketVariable = true;
     daemon.settings = {
