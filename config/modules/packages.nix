@@ -103,7 +103,7 @@
     #-----Misc-----
     pkgs.qmk                    #keyboard control
       pkgs.qmk-udev-rules       #needed for qmk to work LOC
-    pkgs.maple-mono-NF          #maple mono nerdfont LOC
+    pkgs.maple-mono.NF          #maple mono nerdfont LOC
     #pkgs.uwsm                   #universal wayland session manager
     
 

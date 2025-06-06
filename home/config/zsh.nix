@@ -23,7 +23,7 @@
       ignoreSpace = true;
     };
 
-    initExtra = ''
+    initContent = ''
       source ~/.config/zsh/.p10k.zsh
     '';
 
