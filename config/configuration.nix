@@ -27,13 +27,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  #dns blocked websites
-  networking.extraHosts = ''
-    127.0.0.1 reddit.com
-    127.0.0.1 www.reddit.com
-    127.0.0.1 facebook.com
-    127.0.0.1 www.facebook.com
-  '';
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
