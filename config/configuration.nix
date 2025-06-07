@@ -27,6 +27,14 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  #dns blocked websites
+  networking.extraHosts = ''
+    127.0.0.1 reddit.com
+    127.0.0.1 www.reddit.com
+    127.0.0.1 facebook.com
+    127.0.0.1 www.facebook.com
+  '';
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -228,6 +236,8 @@
   #programs.nixvim.enable = true;
   #programs.neovim.enable = true;
   services.gvfs.enable = true;
+
+
   #programs.xfconf.enable = true;
 
   # Enable the OpenSSH daemon.
