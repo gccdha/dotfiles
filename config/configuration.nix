@@ -231,6 +231,7 @@
   services.gvfs.enable = true;
 
   services.printing.enable = true; #for printing wow
+  services.printing.drivers = [ pkgs.cnijfilter2 ];
 
 
   #programs.xfconf.enable = true;
