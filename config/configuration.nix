@@ -230,6 +230,8 @@
   #programs.neovim.enable = true;
   services.gvfs.enable = true;
 
+  services.printing.enable = true; #for printing wow
+
 
   #programs.xfconf.enable = true;
 
