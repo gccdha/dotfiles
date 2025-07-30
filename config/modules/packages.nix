@@ -78,6 +78,7 @@
     pkgs.imagemagick            #image manipulation tool
     pkgs.pulseaudio             #enables access to pulse audio commands for pipewire
     pkgs.feh                    #simple image viewer
+    pkgs.digikam                #photo organization and basic editing
 
     #-----Utilities---
     pkgs.bluez                  #bluetooth
