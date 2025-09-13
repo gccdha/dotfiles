@@ -6,7 +6,7 @@
     syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
     autocd = true;
-    dotDir = ".config/zsh";
+    dotDir = config.xdg.configHome;
 
     shellAliases = {
       
