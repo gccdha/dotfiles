@@ -166,11 +166,11 @@
     binds = {
       workspace_back_and_forth = "true";
     };
-    gestures = {
-      workspace_swipe = "true";
-      workspace_swipe_fingers = "4";
-      workspace_swipe_create_new = "false";
-    };
+    gesture = [
+      "3, horizontal, workspace"
+      "5, pinchout, fullscreenstate 1 1"
+      "5, pinchin,  fullscreenstate 0 0"
+    ];
 
 
     misc = {
