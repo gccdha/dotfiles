@@ -167,9 +167,9 @@
       workspace_back_and_forth = "true";
     };
     gesture = [
-      "3, horizontal, workspace"
-      "5, pinchout, dispatcher, fullscreenstate 1 1"
-      "5, pinchin,  dispatcher, fullscreenstate 0 0"
+      "5, horizontal, workspace"
+      "5, pinch, fullscreen"
+      #"5, pinchin,  dispatcher, fullscreenstate 0 0"
     ];
 
 
