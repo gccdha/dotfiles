@@ -168,8 +168,8 @@
     };
     gesture = [
       "3, horizontal, workspace"
-      "5, pinchout, fullscreenstate 1 1"
-      "5, pinchin,  fullscreenstate 0 0"
+      "5, pinchout, dispatcher fullscreenstate 1 1"
+      "5, pinchin,  dispatcher fullscreenstate 0 0"
     ];
 
 
