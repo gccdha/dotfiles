@@ -7,6 +7,26 @@
 
   colorScheme = nix-colors.colorSchemes.gruvbox-dark-medium;
 
+  systemd.user.services.taskwarrior-backup = {
+  Unit.Description = "Backup Taskwarrior data to GitHub";
+    Service = {
+      Type = "oneshot";
+      ExecStart = ''
+        bash -c 'cd ~/.local/share/task && git add . && git commit -m "Auto backup $(date)" && git push'
+      '';
+    };
+  };
+
+  systemd.user.timers.taskwarrior-backup = {
+    Unit.Description = "Run Taskwarrior backup daily";
+    Timer = {
+      OnCalendar = "daily";
+      Persistent = true;
+    };
+    Install.WantedBy = [ "timers.target" ];
+  };
+
+
   home = {
     username = "realram";
     homeDirectory = "/home/realram";
