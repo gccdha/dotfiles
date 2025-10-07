@@ -12,7 +12,7 @@
     Service = {
       Type = "oneshot";
       ExecStart = ''
-        bash -c 'cd ~/.local/share/task && git add . && git commit -m "Auto backup $(date)" && git push'
+        /bin/sh -c 'cd ~/.local/share/task && git add . && git commit -m "Auto backup $(date)" && git push'
       '';
     };
   };
