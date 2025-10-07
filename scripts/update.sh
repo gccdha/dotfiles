@@ -19,7 +19,7 @@ prompt() {
 
 cd /home/realram/.dotfiles
 
-if prompt "Would you like to run '${BLUE_BOLD}git add -A${RESET}'?"; then
+if ! prompt "Would you like to run '${BLUE_BOLD}git add -A${RESET}'?"; then
   git add -A
 else
   git add -u
