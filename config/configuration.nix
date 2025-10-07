@@ -233,6 +233,31 @@
   services.printing.enable = true; #for printing wow
   services.printing.drivers = [ pkgs.cnijfilter2 ];
 
+  
+  #systemd jobs
+  systemd.user.services.taskwarrior-backup = {
+    Unit = {
+      Description = "Backup Taskwarrior data to GitHub";
+    };
+    Service = {
+      ExecStart = ''
+        bash -c 'cd ~/.local/share/task && git add . && git commit -m "Auto backup $(date)" && git push'
+        '';
+    };
+  };
+
+  systemd.user.timers.taskwarrior-backup = {
+    Unit = {
+      Description = "Run Taskwarrior backup daily";
+    };
+    Timer = {
+      OnCalendar = "daily";
+      Persistent = true;
+    };
+    Install = {
+      WantedBy = [ "timers.target" ];
+    };
+  };
 
   #programs.xfconf.enable = true;
 
