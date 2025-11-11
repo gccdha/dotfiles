@@ -95,6 +95,8 @@
     pkgs.zellij                 #simple "multiplexer"
     pkgs.ncdu                   #tui disk information
     pkgs.unzip                  #open zip files
+    pkgs.hashcat                #password cracking for cybersec class
+    pkgs.rocmPackages.clr       #for hashcat
 
   
     # pkgs.atuin                  #shell history search

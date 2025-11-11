@@ -25,6 +25,7 @@
 
     initContent = ''
       source ~/.config/zsh/.p10k.zsh
+      export EDITOR=nvim
     '';
 
     plugins = with pkgs; [

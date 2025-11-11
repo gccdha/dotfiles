@@ -1,0 +1,97 @@
+$orange: #D65F0E;
+$red:    #A63A28;
+$yellow: #F6B93B;
+$brown:  #8B5B29;
+$ch-nut: #994B29;
+$green:  #6BAF23;
+$beige:  #F2E1C1;
+
+$background: $brown;
+$color:      $beige;
+
+$background-secondary: #4e4e4e;
+$highlight-primary: $green;
+
+
+
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+}
+
+//Global Styles
+.bar, .locker {
+  background-color: $background;
+  color: $color;
+  border: 3px solid $color;
+  padding: 5px 15px 5px 15px;
+  border-radius: 50px;
+}
+
+// Styles on classes (see eww.yuck for more information)
+
+.sidestuff slider {
+  all: unset;
+  color: #ffd5cd;
+}
+.metric scale trough highlight {
+  all: unset;
+  background-color: #D35D6E;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric scale trough {
+  all: unset;
+  background-color: $background-secondary;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.label-ram {
+  font-size: large;
+}
+._0 , ._01, ._02, ._03, ._04, ._05, ._06, ._07, ._08, ._09, ._010, ._011, ._022, ._033, ._044, ._055, ._066, ._077, ._088, ._099, ._01010 {
+  margin: 10px 0px 0px 0px;
+}
+._01, ._02, ._03, ._04, ._05, ._06, ._07, ._08, ._09 {
+	color: $color;
+}
+._011, ._022, ._033, ._044, ._055, ._066, ._077, ._088, ._099, ._01010 {
+	color: $yellow;
+	font-weight:bold;
+}
+._0 {
+  color: $background-secondary;
+}
+.workspaces button:hover {
+  background-color: $ch-nut;
+}
+.volbar {
+  color: $green;
+  background-color: $background-secondary;
+  margin: 5px;
+}
+
+.vol_icon {
+  font-family: "SymbolsNerdFont";
+  font-size: 1rem;
+  color: $color;
+  margin: 10px;
+}
+
+.inhibit button:hover, .noinhibit button:hover {
+  background-color: $orange
+}
+
+.inhibit, .noinhibit {
+  font-size: 2rem
+}
+
+.inhibit {
+  color: $red
+}
+.noinhibit {
+  color: $color
+}

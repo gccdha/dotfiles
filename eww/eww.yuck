@@ -1,0 +1,100 @@
+;Bar
+(defwidget bar []
+  (box :orientation "h"
+    (workspaces)
+    (system)
+    (lockbutton)
+    (sidestuff)
+  )
+)
+
+(defwidget system []
+  (box :class "segment" :orientation "h" :space-evenly false
+    (circular-progress
+      :value {EWW_DISK["/"].used_perc}
+      :thickness 4
+      :start-at 50
+      :class "volbar"
+      (label :class "vol_icon" :text ""))
+
+    (circular-progress
+      :value {EWW_CPU.avg}
+      :thickness 4
+      :start-at 50
+      :class "volbar"
+      (label :class "vol_icon" :text ""))
+    
+
+    ;figure all of this stuff out TODO
+    (stack
+    :transition "crossfade"
+    :selected 1
+    :same-size false
+    (circular-progress
+      :value {EWW_RAM.used_mem_perc}
+      :thickness 4
+      :start-at 50
+      :class "volbar"
+      (label :class "vol_icon" :text "")))
+
+(circular-progress
+      :value {EWW_TEMPS["ACPITZ_TEMP1"]}
+      :thickness 4
+      :start-at 50
+      :class "volbar"
+      (label :class "vol_icon" :text ""))
+  )
+)
+(deflisten inhibit "scripts/reader.sh")
+(defwidget lockbutton [] ;TODO fix the script so that it works on lock and dim as well as sleep 
+  (box :class inhibit (button :timeout "24h" :onclick "./scripts/inhibit.sh" "${inhibit == "inhibit" ? "󰷛" : "󰍹"}"))
+)
+
+
+(defwidget sidestuff []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    (circular-progress
+      :value volume
+      :thickness 4
+      :start-at 50
+      :class "volbar"
+      (label :class "vol_icon" :text ""))
+    (circular-progress 
+      :value {EWW_BATTERY["BAT1"].capacity}
+      :thickness 4
+      :start-at 50
+      :class "volbar"
+      (label :class "vol_icon" :text "󰁹"))
+
+      time))
+(deflisten workspace "scripts/workspaces.sh")
+(defwidget workspaces []
+(literal :content workspace))
+
+(defwidget metric [label value onchange]
+  (box :orientation "h"
+       :class "metric"
+       :space-evenly false
+    (box :class "label" label)
+    (scale :min 0
+           :max 101
+           :active {onchange != ""}
+           :value value
+           :onchange onchange)))
+
+(deflisten volume "scripts/volume.sh")
+
+(defpoll time :interval "10s"
+  "date '+%H:%M %b %d, %Y'")
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry :x "0%"
+                :y "10px"
+          :width "2540px"
+          :height "50px"
+          :anchor "top center")
+  :stacking "fg"
+  :exclusive "true"
+  :focusable "false"
+  (bar))
