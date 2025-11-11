@@ -6,10 +6,26 @@ $ch-nut: #994B29;
 $green:  #6BAF23;
 $beige:  #F2E1C1;
 
-$background: $brown;
-$color:      $beige;
+//pastel colors pink -> blue
+$thistle: #cdb4db;
+$fairy-tale: #ffc8dd;
+$carnation-pink: #ffafcc;
+$uranian-blue: #bde0fe;
+$light-sky-blue: #a2d2ff;
 
-$background-secondary: #4e4e4e;
+$thulian-pink: #DD5C98;
+
+//earthy colors pink -> green
+$cherry-blossom-pink: #edafb8;
+$champagne-pink: #f7e1d7;
+$timberwolf: #dedbd2;
+$ash-gray: #b0c4b1;
+$outer-space: #4a5759;
+
+$background: $champagne-pink;
+$color:      $outer-space;
+
+$background-secondary: $ash-gray;
 $highlight-primary: $green;
 
 
@@ -59,17 +75,17 @@ $highlight-primary: $green;
 	color: $color;
 }
 ._011, ._022, ._033, ._044, ._055, ._066, ._077, ._088, ._099, ._01010 {
-	color: $yellow;
-	font-weight:bold;
+	color: $thulian-pink;
+	font-weight:bolder;
 }
 ._0 {
   color: $background-secondary;
 }
 .workspaces button:hover {
-  background-color: $ch-nut;
+  background-color: $ash-gray;
 }
 .volbar {
-  color: $green;
+  color: $thulian-pink;
   background-color: $background-secondary;
   margin: 5px;
 }
@@ -82,7 +98,7 @@ $highlight-primary: $green;
 }
 
 .inhibit button:hover, .noinhibit button:hover {
-  background-color: $orange
+  background-color: $ash-gray;
 }
 
 .inhibit, .noinhibit {
