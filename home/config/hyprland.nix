@@ -1,8 +1,8 @@
 { ... }: {
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = {
-    preload = ["~/Pictures/Wallpaper/dolomites.jpg"];
-    wallpaper = ", ~/Pictures/Wallpaper/dolomites.jpg";
+    preload = ["/home/realram/Pictures/Wallpaper/white_flowers1.jpg"];
+    wallpaper = ", /home/realram/Pictures/Wallpaper/white_flowers1.jpg";
   };
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {

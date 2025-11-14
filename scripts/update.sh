@@ -26,11 +26,11 @@ else
 fi
 
 if ! prompt "Would you like to use the date as the commit message?"; then
-  git commit -m "build at $(date +"%Y-%m-%d at %H:%M")"
+  sudo git commit -m "build at $(date +"%Y-%m-%d at %H:%M")"
 else
   commit=""
   read -p "Commit message: " commit
-  git commit -m "$commit"
+  sudo git commit -m "$commit"
 fi
 
 git push
