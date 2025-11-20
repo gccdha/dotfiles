@@ -20,9 +20,10 @@
     exec=[
       #"swaynm"
       "eww open bar"
-      ", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
+      ", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%" #may be wrong...
       "systemctl --user start hypridle.service"
       "swaync"
+      "alacritty --hold -e zsh -c 'bat /home/realram/Desktop/todo.txt'"
       ];
       
     monitor = [
