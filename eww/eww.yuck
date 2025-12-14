@@ -1,4 +1,4 @@
-;Bar
+;=======BAR========
 (defwidget bar []
   (box :orientation "h"
     (workspaces)
@@ -7,6 +7,8 @@
     (sidestuff)
   )
 )
+
+
 
 (defwidget system []
   (box :class "segment" :orientation "h" :space-evenly false
@@ -37,7 +39,7 @@
       :class "volbar"
       (label :class "vol_icon" :text "")))
 
-(circular-progress
+    (circular-progress
       :value {EWW_TEMPS["ACPITZ_TEMP1"]}
       :thickness 4
       :start-at 50
@@ -45,8 +47,12 @@
       (label :class "vol_icon" :text ""))
   )
 )
+
+
+
+
 (deflisten inhibit "scripts/reader.sh")
-(defwidget lockbutton [] ;TODO fix the script so that it works on lock and dim as well as sleep 
+(defwidget lockbutton [] 
   (box :class inhibit (button :timeout "24h" :onclick "./scripts/inhibit.sh" "${inhibit == "inhibit" ? "󰷛" : "󰍹"}"))
 )
 
