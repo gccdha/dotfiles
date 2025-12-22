@@ -180,6 +180,7 @@
       animate_manual_resizes = "false";
       animate_mouse_windowdragging = "false";
       disable_autoreload = "true";
+      enable_anr_dialog = "false";
     };
 
     cursor = {
