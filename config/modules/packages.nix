@@ -18,7 +18,7 @@
     pkgs.firefox                #web browser
     pkgs.alacritty              #terminal
     pkgs.kitty                  #terminal
-    pkgs.xfce.thunar            #GUI file explorer
+    pkgs.thunar            #GUI file explorer
     pkgs.steam                  #game launcher
     pkgs.vscodium               #GUI IDE
     pkgs.vlc                    #Audio/Video player
