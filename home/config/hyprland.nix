@@ -2,7 +2,7 @@
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = {
     wallpaper = {
-      path = "/home/realram/Pictures/Wallpaper/white_flowers1.jpg"
+      path = "/home/realram/Pictures/Wallpaper/white_flowers1.jpg";
     };
   };
   wayland.windowManager.hyprland.enable = true;
