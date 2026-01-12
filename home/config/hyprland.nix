@@ -1,10 +1,17 @@
 { ... }: {
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = {
-    wallpaper = {
-      monitor = "";
+    wallpaper = [
+    {
+      monitor = "eDP-1";
       path = "/home/realram/Pictures/Wallpaper/white_flowers1.jpg";
-    };
+      fit_mode = "cover";
+    },
+    {
+      monitor = "";
+      path = "/home/realram/Pictures/Wallpaper/willow_sunset.jpg";
+    }
+    ]
   };
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
