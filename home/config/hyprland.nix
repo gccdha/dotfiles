@@ -2,6 +2,7 @@
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = {
     wallpaper = {
+      monitor = "";
       path = "/home/realram/Pictures/Wallpaper/white_flowers1.jpg";
     };
   };
