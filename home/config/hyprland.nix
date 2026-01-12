@@ -11,7 +11,7 @@
       monitor = "";
       path = "/home/realram/Pictures/Wallpaper/willow_sunset.jpg";
     }
-    ]
+    ];
   };
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
