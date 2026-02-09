@@ -35,6 +35,7 @@
     pkgs.timewarrior            #cli time trackr
     pkgs.qgis                   #gis viewer
     pkgs.olympus                #celeste mod manager
+    (pkgs.olympus.override {celesteWrapper = "steam-run"; })
 
     #pkgs.everest-mons           #celeste mod manager
     #   pkgs.icu                  #unicode library
