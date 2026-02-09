@@ -34,6 +34,7 @@
     pkgs.taskwarrior3           #cli task manager
     pkgs.timewarrior            #cli time trackr
     pkgs.qgis                   #gis viewer
+    pkgs.olympus                #celeste mod manager
 
     #pkgs.everest-mons           #celeste mod manager
     #   pkgs.icu                  #unicode library
