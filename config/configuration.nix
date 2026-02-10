@@ -245,6 +245,8 @@
   networking.firewall.allowedTCPPorts = [ 47984 47989 47990 48010 ]; 
   networking.firewall.allowedUDPPorts = [ 47998 47999 48000 ];
 
+  networking.firewall.checkReversePath = "loose";
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 22 ];
   # networking.firewall.allowedUDPPorts = [ 51820 ];
