@@ -17,6 +17,10 @@
     enable = true;
     latitude = 40.0;
     longitude = -105.0;
+    temperature = {
+      night = 1000;
+      day = 6500;
+    };
   };
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
