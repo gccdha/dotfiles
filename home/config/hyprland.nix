@@ -45,7 +45,7 @@
       
     monitor = [
       "eDP-1,2560x1600@165,0x0,1"       #name, resolution, position, scale
-      ",preferred,auto,1,mirror,eDP-1"  #extra display: uncomment for mirror
+      ",preferred,auto,1,," # mirror,eDP-1"  #extra display: uncomment for mirror
     ];
 
     #VARS
