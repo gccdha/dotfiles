@@ -37,6 +37,7 @@
     pkgs.olympus                #celeste mod manager
     (pkgs.olympus.override {celesteWrapper = "steam-run"; })
     pkgs.protonvpn-gui
+    pkgs.godot
 
     #pkgs.everest-mons           #celeste mod manager
     #   pkgs.icu                  #unicode library
@@ -70,7 +71,7 @@
     #                           #sddm and theme
     inputs.sddm-astro.packages.${system}.sddm-astro
     pkgs.hyprshot               # screenshot
-    pkgs.gammastep              # for blue light filtering
+    pkgs.gammastep              # for blue light filtering (REPLACE WITH HYPRSUNSET)
     # pkgs.sddm-astronaut
 
     # pkgs.greetd.tuigreet        #tui sddm alternative
