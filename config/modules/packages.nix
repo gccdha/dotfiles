@@ -26,14 +26,14 @@
     pkgs.vesktop                #discord client
     #                           #Neovim (nixvim flake)
     inputs.nixvim-flake.packages.${system}.default
-    pkgs.lutris                 #game compat (for trackmania)
+    # pkgs.lutris                 #game compat (for trackmania)
     pkgs.prismlauncher          #minecraft launcher
     pkgs.zathura                #pdf viewer
     pkgs.lumafly                #hollow knight mod launcher
     pkgs.tor-browser            #TOR browser
     pkgs.taskwarrior3           #cli task manager
     pkgs.timewarrior            #cli time trackr
-    pkgs.qgis                   #gis viewer
+    # pkgs.qgis                   #gis viewer
     pkgs.olympus                #celeste mod manager
     (pkgs.olympus.override {celesteWrapper = "steam-run"; })
     pkgs.protonvpn-gui
