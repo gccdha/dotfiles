@@ -63,7 +63,7 @@
   #home-manager.users.realram = import /home/realram/.config/home-manager/home.nix;
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true; NOTE: this is in the packages module now
 
   #  nixpkgs.config.permittedInsecurePackages = [
   #    "dotnet-runtime-wrapped-7.0.20"
