@@ -26,6 +26,7 @@
     Install.WantedBy = [ "timers.target" ];
   };
 
+  home-manager.useGlobalPkgs = true;
 
   home = {
     username = "realram";
