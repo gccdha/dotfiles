@@ -117,7 +117,9 @@
       pkgs.qmk-udev-rules       #needed for qmk to work LOC
     pkgs.maple-mono.NF          #maple mono nerdfont LOC
     #pkgs.uwsm                   #universal wayland session manager
-    pkgs.itd                    # infinitime daemon
+    # pkgs.itd                    # infinitime daemon (removed because it contains an error in the latest release. check back to see if updated)
+    pkgs.watchmate              #infinitime management app
+    pkgs.ckb-next               #manages rgb on corsair mouse
     
 
   ];
