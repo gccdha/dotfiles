@@ -10,9 +10,6 @@
     #"discord"
       
     ];
-
-  services.ckb-next.enable = true; # enable mouse daemon
-
   environment.systemPackages = [
     pkgs.git # install first for flakes
 
