@@ -4,7 +4,8 @@
     wallpaper = [
     {
       monitor = "eDP-1";
-      path = "/home/realram/Pictures/Wallpaper/white_flowers1.jpg";
+      # path = "/home/realram/Pictures/Wallpaper/white_flowers1.jpg";
+        path = "/home/realram/Pictures/Wallpaper/artemis_moon_earth_and_reflection.JPG";
       fit_mode = "cover";
     }
     {
@@ -41,6 +42,7 @@
       ", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%" #may be wrong...
       "systemctl --user start hypridle.service"
       "swaync"
+      "alacritty -e zsh -c 'bat /home/realram/todo.txt; exec zsh' & disown"
       ];
       
     monitor = [
