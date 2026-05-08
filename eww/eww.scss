@@ -1,34 +1,9 @@
-$orange: #D65F0E;
-$red:    #A63A28;
-$yellow: #F6B93B;
-$brown:  #8B5B29;
-$ch-nut: #994B29;
-$green:  #6BAF23;
-$beige:  #F2E1C1;
-$light-pink: #FAE2EE;
-//pastel colors
-$thistle:         #cdb4db;
-$fairy-tale:      #ffc8dd;
-$carnation-pink:  #ffafcc;
-$uranian-blue:    #bde0fe;
-$light-sky-blue:  #a2d2ff;
+$background: rgba(0,0,0,0);
+// $background: rgba(40,40,45,0.5);
 
-$thulian-pink: #DD5C98;
-
-//earthy colors
-$cherry-blossom-pink: #edafb8;
-$champagne-pink:      #f7e1d7;
-$timberwolf:          #dedbd2;
-$ash-gray:            #b0c4b1;
-$outer-space:         #4a5759;
-
-$background: $light-pink;
-$color:      $outer-space;
-
-$background-secondary: $ash-gray;
-$highlight-primary: $green;
-
-
+$color: #ffd9c2;
+$highlight: #dd7c58;
+$background-secondary: #303030;
 
 
 * {
@@ -42,20 +17,21 @@ $highlight-primary: $green;
   border: 3px solid $color;
   padding: 5px 15px 5px 15px;
   border-radius: 50px;
+  // filter: blur(1px);
 }
 
 // Styles on classes (see eww.yuck for more information)
 
-.sidestuff slider {
-  all: unset;
-  color: #ffd5cd;
-}
-.metric scale trough highlight {
-  all: unset;
-  background-color: #D35D6E;
-  color: #000000;
-  border-radius: 10px;
-}
+// .sidestuff slider {
+//   all: unset;
+//   color: #00ff00;
+// }
+//
+// .metric scale trough highlight {
+//   all: unset;
+//   background-color: #D3FD6E;
+//   border-radius: 10px;
+// }
 .metric scale trough {
   all: unset;
   background-color: $background-secondary;
@@ -75,17 +51,19 @@ $highlight-primary: $green;
 	color: $color;
 }
 ._011, ._022, ._033, ._044, ._055, ._066, ._077, ._088, ._099, ._01010 {
-	color: $thulian-pink;
+	color: $highlight;
 	font-weight:bolder;
 }
 ._0 {
   color: $background-secondary;
 }
 .workspaces button:hover {
-  background-color: $ash-gray;
+  // all:unset;
+  border: 1px solid $highlight;
+  margin: 9px -1px -1px -1px;
 }
 .volbar {
-  color: $thulian-pink;
+  color: $highlight;
   background-color: $background-secondary;
   margin: 5px;
 }
@@ -98,16 +76,14 @@ $highlight-primary: $green;
 }
 
 .inhibit button:hover, .noinhibit button:hover {
-  background-color: $ash-gray;
+  border: 1px solid $highlight;
 }
-
 .inhibit, .noinhibit {
-  font-size: 2rem
+  font-size: 2rem;
 }
-
 .inhibit {
-  color: $red
+  color: $highlight;
 }
 .noinhibit {
-  color: $color
+  color: $color;
 }
