@@ -1,13 +1,13 @@
 #!/bin/sh
-thresholds=(90 80 10 5) #battery levels to notify at
+thresholds=(10 5) #battery levels to notify at
 interval=10 #seconds between checking
 
 #create a 1ms dummy notification to get an id we can use for all of the rest
 notification_id=$(notify-send -p "Battery notifications started" --expire-time=1)
 
 pid_flag=0
-num_thresholds=4
-threshold_flags=(0 0 0 0)
+num_thresholds=2
+threshold_flags=(0 0)
 bat_cap=$(cat /sys/class/power_supply/BAT1/charge_full) # get max chanrge
 
 while sleep "$interval";

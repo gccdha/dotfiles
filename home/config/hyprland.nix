@@ -164,6 +164,8 @@
       "$mod SHIFT, 8, movetoworkspacesilent, 8"
       "$mod SHIFT, 9, movetoworkspacesilent, 9"
       "$mod SHIFT, 0, movetoworkspacesilent, 10"
+      ", Print, exec, hyprshot -m output -m eDP-1 -o /home/realram/Pictures/Screenshots"
+      "SHIFT, Print, exec, hyprshot -m region -o /home/realram/Pictures/Screenshots"
     ];
     bindl = [
       # Media Keys
