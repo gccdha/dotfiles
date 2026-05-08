@@ -1,13 +1,13 @@
 #!/bin/sh
-thresholds=(90 10 5) #battery levels to notify at
+thresholds=(90 80 10 5) #battery levels to notify at
 interval=10 #seconds between checking
 
 #create a 1ms dummy notification to get an id we can use for all of the rest
 notification_id=$(notify-send -p "Battery notifications started" --expire-time=1)
 
 pid_flag=0
-num_thresholds=3
-threshold_flags=(0 0 0)
+num_thresholds=4
+threshold_flags=(0 0 0 0)
 bat_cap=$(cat /sys/class/power_supply/BAT1/charge_full) # get max chanrge
 
 while sleep "$interval";
@@ -23,8 +23,9 @@ do
     # if the last notification is still showing, send a notification to indicate charging 
     kill -0 "$pid" 2>/dev/null
     if [[ ($? == 0) && ($pid_flag == 1) ]]; then
-      notify-send -r "$notification_id" -t 2000 -i /home/realram/code/misc/bat_icon.svg "Charging" "Battery is charging" -w & 
+      notify-send -r "$notification_id" -t 2000 -i /home/realram/.dotfiles/battery_notification/charging_low_battery_material_icon.svg "Charging" "Battery is charging"
       pid_flag=0
+      kill -9 "$pid"
     fi
   fi
 
@@ -35,7 +36,7 @@ do
       threshold=${thresholds[$i]}
       if [[ ( $percent -le ${threshold} ) && ( ${threshold_flags[$i]} == 0 )  ]]; then
         # Send notification and record the PID
-        notify-send -r "$notification_id" -u critical -i /home/realram/code/misc/bat_icon.svg "BATTERY LOW" "Battery is at $threshold%" -w &
+        notify-send -r "$notification_id" -u critical -i /home/realram/.dotfiles/battery_notification/low_battery_material_icon.svg "BATTERY LOW" "Battery is at $percent%" -w &
         pid=$!
         pid_flag=1
         threshold_flags[$i]=1
