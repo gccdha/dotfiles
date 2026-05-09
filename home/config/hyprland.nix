@@ -61,6 +61,7 @@
       "XCURSOR_SIZE,24"
       "XCURSOR_THEME,xsweet-cursors"
       "QT_QPA_PLATFORMTHEME,qt6ct"
+      "WLR_NO_HARDWARE_CURSORS,1"
     ];
 
     #INPUT RULES

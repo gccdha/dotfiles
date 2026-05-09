@@ -38,7 +38,7 @@
     # pkgs.qgis                   #gis viewer
     pkgs.olympus                #celeste mod manager
     (pkgs.olympus.override {celesteWrapper = "steam-run"; })
-    pkgs.protonvpn-gui
+    pkgs.proton-vpn
     pkgs.godot
 
     #pkgs.everest-mons           #celeste mod manager
