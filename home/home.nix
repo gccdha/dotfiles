@@ -27,7 +27,7 @@
   };
 
   home = {
-    pointerCursor.hyprcursor.enable = true;
+    # pointerCursor.hyprcursor.enable = true;
     username = "realram";
     homeDirectory = "/home/realram";
     packages = [];

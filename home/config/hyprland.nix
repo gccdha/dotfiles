@@ -24,6 +24,7 @@
     };
   };
   wayland.windowManager.hyprland.enable = true;
+  wayland.windowManager.hyprland.configType = "lua";
   wayland.windowManager.hyprland.settings = {
       # ==========GENERAL=TODO================
       # set up display power management system (DPMS) (eeping)
