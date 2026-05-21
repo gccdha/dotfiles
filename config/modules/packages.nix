@@ -51,6 +51,7 @@
     # pkgs.postman                #API tester
     # pkgs.digikam                #image library manager
     # #                           #plover stenography 
+    pkgs.plover_5
     # (inputs.plover-flake.packages.${system}.plover.with-plugins (
     #   ps: with ps; [
     #     plover-lapwing-aio
