@@ -45,7 +45,6 @@
       "swaync"
       "alacritty -e zsh -c 'bat /home/realram/todo.txt; exec zsh' & disown"
       "zsh /home/realram/.dotfiles/battery_notification/battery_notification.sh"
-      "hyprctl output create headless"
       ];
       
     monitor = [
