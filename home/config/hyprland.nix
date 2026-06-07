@@ -45,10 +45,12 @@
       "swaync"
       "alacritty -e zsh -c 'bat /home/realram/todo.txt; exec zsh' & disown"
       "zsh /home/realram/.dotfiles/battery_notification/battery_notification.sh"
+      "hyprctl output create headless"
       ];
       
     monitor = [
       "eDP-1,2560x1600@165,0x0,1"       #name, resolution, position, scale
+      "HEADLESS-2,disable"
       ",preferred,auto,1,," # mirror,eDP-1"  #extra display: uncomment for mirror
     ];
 
