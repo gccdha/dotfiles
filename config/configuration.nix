@@ -249,6 +249,23 @@
     autoStart = false;
     openFirewall = true;
     capSysAdmin = false;
+    applications = {
+      # env = {
+      #   PATH = "$(PATH):$(HOME)/.local/bin";
+      # };
+
+      apps = [
+        {
+          name = "Auto Desktop";
+          prep-cmd = [
+            {
+              do = "sh -c 'hyprctl keyword monitor HEADLESS-1,\${SUNSHINE_CLIENT_WIDTH}x\${SUNSHINE_CLIENT_HEIGHT}@\${SUNSHINE_CLIENT_FPS},auto,1'";
+              undo = "hyprctl keyword monitor HEADLESS-1,disable";
+            }
+          ];
+        }
+      ];
+    };
   }; 
 
 
