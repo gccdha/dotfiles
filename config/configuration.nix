@@ -250,9 +250,9 @@
     openFirewall = true;
     capSysAdmin = false;
     applications = {
-      # env = {
-      #   PATH = "$(PATH):$(HOME)/.local/bin";
-      # };
+      env = {
+        PATH = "$(PATH):$(HOME)/.local/bin";
+      };
 
       apps = [
         {
