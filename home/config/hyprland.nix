@@ -193,7 +193,7 @@
     };
     gesture = [
       "4, horizontal, workspace"
-      "4, pinch, fullscreen"
+      "4, vertical, fullscreen"
       #"5, pinchin,  dispatcher, fullscreenstate 0 0"
     ];
 
