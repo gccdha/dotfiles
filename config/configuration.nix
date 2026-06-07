@@ -248,7 +248,7 @@
     enable = true;
     autoStart = false;
     openFirewall = true;
-    capSysAdmin = false;
+    capSysAdmin = true;
     applications = {
       env = {
         PATH = "$(PATH):$(HOME)/.local/bin";
