@@ -243,8 +243,14 @@
 
 
   # for sunshine
-  networking.firewall.allowedTCPPorts = [ 47984 47989 47990 48010 7777]; 
-  networking.firewall.allowedUDPPorts = [ 47998 47999 48000 7777];
+
+  services.sunshine = {
+    enable = true;
+    autoStart = false;
+    openFirewall = true;
+    capSysAdmin = true;
+  }; 
+
 
   networking.firewall.checkReversePath = "loose";
 
