@@ -248,7 +248,7 @@
     enable = true;
     autoStart = false;
     openFirewall = true;
-    capSysAdmin = true;
+    capSysAdmin = false;
   }; 
 
 
