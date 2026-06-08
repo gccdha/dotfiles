@@ -24,7 +24,7 @@
     };
   };
   wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.configType = "hyprlang";
+  wayland.windowManager.hyprland.configType = "lua";
   wayland.windowManager.hyprland.settings = {
       # ==========GENERAL=TODO================
       # set up display power management system (DPMS) (eeping)
@@ -45,6 +45,7 @@
       "swaync"
       "alacritty -e zsh -c 'bat /home/realram/todo.txt; exec zsh' & disown"
       "zsh /home/realram/.dotfiles/battery_notification/battery_notification.sh"
+      "hyprctl output create headless"
       ];
       
     monitor = [
