@@ -55,9 +55,11 @@
     ];
 
     #VARS
-    "$terminal" = "alacritty";
+    terminal._var = "alacritty";
+    # "$terminal" = "alacritty";
     "$fileManager" = "thunar";
     "$menu"="wofi --show drun -a -I";
+
     env = [
       "HYPRCURSOR_SIZE,24"
       "HYPRCURSOR_THEME,sweet-cursors"
