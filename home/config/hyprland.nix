@@ -56,11 +56,10 @@
 
     #VARS
     terminal._var = "alacritty";
-    # "$terminal" = "alacritty";
-    "$fileManager" = "thunar";
-    "$menu"="wofi --show drun -a -I";
+    fileManager._var = "thunar";
+    menu._var ="wofi --show drun -a -I";
 
-    env = [
+    env._args = [
       "HYPRCURSOR_SIZE,24"
       "HYPRCURSOR_THEME,sweet-cursors"
       "XCURSOR_SIZE,24"
