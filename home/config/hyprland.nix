@@ -171,7 +171,7 @@
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod .. \"+ SHIFT + apostrophe\"")
-        (lib.generators.mkLuaInline "hl.dsp.close()")
+        (lib.generators.mkLuaInline "hl.dsp.window.close()")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod .. \"+ SHIFT + H\"")
@@ -186,7 +186,7 @@
       #add keybind rule for the lid switch
       { _args = [
         (lib.generators.mkLuaInline "mod .. \"+ SHIFT + space\"")
-        (lib.generators.mkLuaInline "hl.dsp.float()")
+        (lib.generators.mkLuaInline "hl.dsp.window.float()")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ E\"")
@@ -194,7 +194,7 @@
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ U\"")
-        (lib.generators.mkLuaInline "hl.dsp.fullscreen()") 
+        (lib.generators.mkLuaInline "hl.dsp.window.fullscreen()") 
       ];}
 
       # WINDOW NAVIGATION
@@ -281,43 +281,43 @@
  
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 1\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"1\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"1\"})")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 2\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"2\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"2\"})")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 3\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"3\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"3\"})")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 4\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"4\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"4\"})")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 5\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"5\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"5\"})")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 6\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"6\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"6\"})")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 7\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"7\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"7\"})")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 8\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"8\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"8\"})")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 9\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"9\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"9\"})")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ SHIFT + 0\"")
-        (lib.generators.mkLuaInline "hl.dsp.move({workspace = \"10\"})")
+        (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"10\"})")
       ];}
 
       # SCREENSHOTS
