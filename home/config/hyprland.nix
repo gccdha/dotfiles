@@ -167,7 +167,7 @@
     bind = [
       { _args = [
         (lib.generators.mkLuaInline "mod .. \"+ return\"")
-        (lib.generators.mkLuaInlin "hl.dsp.exec_cmd(terminal)")
+        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(terminal)")
       ];}
       { _args = [
         (lib.generators.mkLuaInline "mod .. \"+ SHIFT + apostrophe\"")
