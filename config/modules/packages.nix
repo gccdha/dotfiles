@@ -75,6 +75,7 @@
     inputs.sddm-astro.packages.${system}.sddm-astro
     pkgs.hyprshot               # screenshot
     pkgs.gammastep              # for blue light filtering (REPLACE WITH HYPRSUNSET)
+    pkgs.hyprshutdown           # for shutting down the system gracefully
     # pkgs.sddm-astronaut
 
     # pkgs.greetd.tuigreet        #tui sddm alternative
