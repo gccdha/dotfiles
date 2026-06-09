@@ -113,7 +113,7 @@
         border_size = 3;
         gaps_in = 5;
         gaps_out = 20;
-        "col.active_border" = { colors = ["rgba(33ccffee)" "rgba(9999ffee"]; angle = 45; };
+        "col.active_border" = { colors = ["rgba(33ccffee)" "rgba(9999ffee)"]; angle = 45; };
         "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
       };
