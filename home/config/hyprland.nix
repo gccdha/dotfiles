@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, ... }: {
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = {
     wallpaper = [
@@ -37,19 +37,29 @@
       # set up some window/workspace rules and then set another todo to do more advanced ones once you get further in the ricing process
       # add animations here and fine tune them
 
-    exec=[
-      #"swaynm"
-      "eww open bar"
-      ", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%" #may be wrong...
-      "systemctl --user start hypridle.service"
-      "swaync"
-      "alacritty -e zsh -c 'bat /home/realram/todo.txt; exec zsh' & disown"
-      "zsh /home/realram/.dotfiles/battery_notification/battery_notification.sh"
-      "hyprctl output create headless"
+    on._args = [
+      "hyprland.start"
+      (lib.generators.mkLuaInline ''
+      function()
+      hl.exec_cmd("eww open bar")
+      hl.exec_cmd(", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%")
+      hl.exec_cmd("systemctl --user start hypridle.service")
+      hl.exec_cmd("swaync")
+      hl.exec_cmd("alacritty -e zsh -c 'bat /home/realram/todo.txt; exec zsh' & disown")
+      hl.exec_cmd("zsh /home/realram/.dotfiles/battery_notification/battery_notification.sh")
+      hl.exec_cmd("hyprctl output create headless")
+      end
+      '')
       ];
+
       
     monitor = [
-      "eDP-1,2560x1600@165,0x0,1"       #name, resolution, position, scale
+      {
+        output = "eDP-1";
+        mode = "2560x1600@165";
+        position = "0x0";
+        scale = "1";
+      } 
       "HEADLESS-2,disable"
       ",preferred,auto,1,," # mirror,eDP-1"  #extra display: uncomment for mirror
     ];
@@ -67,6 +77,8 @@
       {_args = ["QT_QPA_PLATFORMTHEME" "qt6ct"];}
       {_args = ["WLR_NO_HARDWARE_CURSORS" "1"];}
     ];
+
+
     #INPUT RULES
     input = {
       kb_layout = "us,us";
