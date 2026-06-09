@@ -60,12 +60,12 @@
     menu._var ="wofi --show drun -a -I";
 
     env._args = [
-      "HYPRCURSOR_SIZE,24"
-      "HYPRCURSOR_THEME,sweet-cursors"
-      "XCURSOR_SIZE,24"
-      "XCURSOR_THEME,xsweet-cursors"
-      "QT_QPA_PLATFORMTHEME,qt6ct"
-      "WLR_NO_HARDWARE_CURSORS,1"
+      ["HYPRCURSOR_SIZE" "24"]
+      ["HYPRCURSOR_THEME" "sweet-cursors"]
+      ["XCURSOR_SIZE" "24"]
+      ["XCURSOR_THEME" "xsweet-cursors"]
+      ["QT_QPA_PLATFORMTHEME" "qt6ct"]
+      ["WLR_NO_HARDWARE_CURSORS" "1"]
     ];
 
     #INPUT RULES
