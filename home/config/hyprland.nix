@@ -97,41 +97,41 @@
         kb_options = "";
         kb_rules = "";
 
-        follow_mouse = "1"; #Cursor always changes focus
-        sensitivity = "0.0";
+        follow_mouse = 1; #Cursor always changes focus
+        sensitivity = 0.0;
         touchpad = {
-          disable_while_typing = "false";
-          natural_scroll = "true";
-          scroll_factor = "0.75";
-          clickfinger_behavior = "true"; #2/3 finger right/middle click
-          tap-to-click = "false";
+          disable_while_typing = false;
+          natural_scroll = true;
+          scroll_factor = 0.75;
+          clickfinger_behavior = true; #2/3 finger right/middle click
+          tap-to-click = false;
         };
       };
 
       #APPEARANCE RULES
       general = {
-        border_size = "3";
-        gaps_in = "5";
-        gaps_out = "20";
+        border_size = 3;
+        gaps_in = 5;
+        gaps_out = 20;
         "col.active_border" = "rgba(33ccffee) rgba(9999ffee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
       };
       decoration = {
-        rounding = "10";
-        active_opacity = "1.0";
-        inactive_opacity = "1.0";
-        fullscreen_opacity = "1.0";
-        # drop_shadow = "true";
+        rounding = 10;
+        active_opacity = 1.0;
+        inactive_opacity = 1.0;
+        fullscreen_opacity = 1.0;
+        # drop_shadow = true;
         # shadow_range = "4";
         # shadow_render_power = "3";
         # "col.shadow" = "rgba(1a1a1aee)";
-        dim_inactive = "true";
-        dim_strength = "0.2";
+        dim_inactive = true;
+        dim_strength = 0.2;
         blur = {
-          enabled = "true";
-          size = "3";
-          passes = "1";
+          enabled = true;
+          size = 3;
+          passes = 1;
         };
       };
 
@@ -142,17 +142,17 @@
     
       # MISC
       misc = {
-        disable_splash_rendering = "true";
-        force_default_wallpaper = "0";
-        animate_manual_resizes = "false";
-        animate_mouse_windowdragging = "false";
-        disable_autoreload = "true";
-        enable_anr_dialog = "false";
+        disable_splash_rendering = true;
+        force_default_wallpaper = 0;
+        animate_manual_resizes = false;
+        animate_mouse_windowdragging = false;
+        disable_autoreload = true;
+        enable_anr_dialog = false;
       };
 
       # CURSOR
       cursor = {
-        no_warps = "true";
+        no_warps = true;
       };
     };
     
