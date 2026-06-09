@@ -59,15 +59,14 @@
     fileManager._var = "thunar";
     menu._var ="wofi --show drun -a -I";
 
-    env._args = [
-      ["HYPRCURSOR_SIZE" "24"]
-      ["HYPRCURSOR_THEME" "sweet-cursors"]
-      ["XCURSOR_SIZE" "24"]
-      ["XCURSOR_THEME" "xsweet-cursors"]
-      ["QT_QPA_PLATFORMTHEME" "qt6ct"]
-      ["WLR_NO_HARDWARE_CURSORS" "1"]
+    env = [
+      {_args = ["HYPRCURSOR_SIZE" "24"];}
+      {_args = ["HYPRCURSOR_THEME" "sweet-cursors"];}
+      {_args = ["XCURSOR_SIZE" "24"];}
+      {_args = ["XCURSOR_THEME" "xsweet-cursors"];}
+      {_args = ["QT_QPA_PLATFORMTHEME" "qt6ct"];}
+      {_args = ["WLR_NO_HARDWARE_CURSORS" "1"];}
     ];
-
     #INPUT RULES
     input = {
       kb_layout = "us,us";
