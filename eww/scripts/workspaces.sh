@@ -42,16 +42,16 @@ workspaces() {
   #eww widget
   if $print; then
     echo "(box :class \"workspaces\"    :orientation \"h\"    :space-evenly \"true\"    :halign \"start\"    :spacing 10\
-   	    (button :onclick \"hyprctl dispatch workspace 1\" :class \"_0$o1$f1\" \"1\") \
-	    (button :onclick \"hyprctl dispatch workspace 2\" :class \"_0$o2$f2\" \"2\") \
-	    (button :onclick \"hyprctl dispatch workspace 3\" :class \"_0$o3$f3\" \"3\") \
-	    (button :onclick \"hyprctl dispatch workspace 4\" :class \"_0$o4$f4\" \"4\") \
-	    (button :onclick \"hyprctl dispatch workspace 5\" :class \"_0$o5$f5\" \"5\") \
-	    (button :onclick \"hyprctl dispatch workspace 6\" :class \"_0$o6$f6\" \"6\") \
-	    (button :onclick \"hyprctl dispatch workspace 7\" :class \"_0$o7$f7\" \"7\") \
-	    (button :onclick \"hyprctl dispatch workspace 8\" :class \"_0$o8$f8\" \"8\") \
-	    (button :onclick \"hyprctl dispatch workspace 9\" :class \"_0$o9$f9\" \"9\") \
-	    (button :onclick \"hyprctl dispatch workspace 10\" :class \"_0$o10$f10\" \"10\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 1})'\" :class \"_0$o1$f1\" \"1\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 2})'\" :class \"_0$o2$f2\" \"2\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 3})'\" :class \"_0$o3$f3\" \"3\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 4})'\" :class \"_0$o4$f4\" \"4\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 5})'\" :class \"_0$o5$f5\" \"5\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 6})'\" :class \"_0$o6$f6\" \"6\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 7})'\" :class \"_0$o7$f7\" \"7\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 8})'\" :class \"_0$o8$f8\" \"8\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 9})'\" :class \"_0$o9$f9\" \"9\") \
+    (button :onclick \"hyprctl dispatch 'hl.dsp.focus({workspace = 10})'\" :class \"_0$o10$f10\" \"10\") \
 	  )"
   fi
 }
