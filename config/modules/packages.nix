@@ -6,8 +6,8 @@
       "steam"
       "steam-unwrapped"
       "copilot.vim"
-    #"spotify"
-    #"discord"
+      "spotify"
+      "discord"
       
     ];
   environment.systemPackages = [
@@ -25,7 +25,8 @@
     pkgs.vscodium               #GUI IDE
     pkgs.vlc                    #Audio/Video player
     pkgs.obsidian               #Markdown notetaking
-    pkgs.vesktop                #discord client
+    # pkgs.vesktop                #discord client
+    pkgs.discord
     #                           #Neovim (nixvim flake)
     inputs.nixvim-flake.packages.${system}.default
     # pkgs.lutris                 #game compat (for trackmania)
@@ -46,8 +47,7 @@
     # pkgs.sage                   #cli math engine
 
     
-    # pkgs.discord                #Message client
-    # pkgs.spotify                #music
+    pkgs.spotify                #music
     # pkgs.postman                #API tester
     # pkgs.digikam                #image library manager
     # #                           #plover stenography 
