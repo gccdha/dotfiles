@@ -168,14 +168,14 @@
       {
         name = "Picture in picture no dim";
         match = {
-          class = "Picture-in-Picture";
+          title = "Picture-in-Picture";
         };
         no_dim = true;
       } 
       {
         name = "Picture in picture auto pin";
         match = {
-          class = "Picture-in-Picture";
+          title = "Picture-in-Picture";
           float = true;
         };
         pin = true;
