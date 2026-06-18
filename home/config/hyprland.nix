@@ -159,35 +159,36 @@
         no_warps = true;
       };
 
-      # WINDOW RULES
-
-      window_rule = [
-        {
-          name = "Picture in picture no dim";
-          match = {
-            class = "Picture-in-Picture";
-          };
-          no_dim = true;
-        } 
-        {
-          name = "Picture in picture auto pin";
-          match = {
-            class = "Picture-in-Picture";
-            float = true;
-          };
-          pin = true;
-        }
-        {
-          name = "Pinned distinct border";
-          match = {
-            pin = true;
-          };
-          border_size = 0;
-          rounding = 0;
-        }
-      ];
     };
     
+
+    # WINDOW RULES
+
+    window_rule = [
+      {
+        name = "Picture in picture no dim";
+        match = {
+          class = "Picture-in-Picture";
+        };
+        no_dim = true;
+      } 
+      {
+        name = "Picture in picture auto pin";
+        match = {
+          class = "Picture-in-Picture";
+          float = true;
+        };
+        pin = true;
+      }
+      {
+        name = "Pinned distinct border";
+        match = {
+          pin = true;
+        };
+        border_size = 0;
+        rounding = 0;
+      }
+    ];
 
     #===========KEYBINDS=AND=INPUT============
     #flags:
