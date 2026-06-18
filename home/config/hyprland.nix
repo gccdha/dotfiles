@@ -37,6 +37,9 @@
       # set up some window/workspace rules and then set another todo to do more advanced ones once you get further in the ricing process
       # add animations here and fine tune them
 
+
+    #STARTUP 
+
     on._args = [
       "hyprland.start"
       (lib.generators.mkLuaInline ''
@@ -52,6 +55,7 @@
       '')
       ];
 
+    #MONITORS
       
     monitor = [
       {
@@ -154,6 +158,34 @@
       cursor = {
         no_warps = true;
       };
+
+      # WINDOW RULES
+
+      window_rule = [
+        {
+          name = "Picture in picture no dim";
+          match = {
+            class = "Picture-in-Picture";
+          };
+          no_dim = true;
+        } 
+        {
+          name = "Picture in picture auto pin";
+          match = {
+            class = "Picture-in-Picture";
+            float = true;
+          };
+          pin = true;
+        }
+        {
+          name = "Pinned distinct border";
+          match = {
+            pin = true;
+          };
+          border_size = 0;
+          rounding = 0;
+        }
+      ];
     };
     
 
@@ -195,6 +227,10 @@
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ U\"")
         (lib.generators.mkLuaInline "hl.dsp.window.fullscreen()") 
+      ];}
+      { _args = [
+        (lib.generators.mkLuaInline "mod ..\"+ I\"")
+        (lib.generators.mkLuaInline "hl.dsp.window.pin()")
       ];}
 
       # WINDOW NAVIGATION
