@@ -108,6 +108,7 @@
     pkgs.hashcat                #password cracking for cybersec class
     pkgs.rocmPackages.clr       #for hashcat
     pkgs.jq                     #command line json manipulator
+    pkgs.framework-tool         #allows low level control and analysis of system info (fan speed for example)
 
   
     # pkgs.atuin                  #shell history search
