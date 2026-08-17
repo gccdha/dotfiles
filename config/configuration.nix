@@ -152,6 +152,13 @@
     enable = true;
   };
 
+  services.tuned = {
+    enable = true;
+    settings = {
+      dynamic_tuning = true;
+    };
+  };
+
   #services.tlp = {
   #  enable = true;
   #  settings = {
