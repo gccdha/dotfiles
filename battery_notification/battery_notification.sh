@@ -1,5 +1,5 @@
 #!/bin/sh
-thresholds=(10 5) #battery levels to notify at
+thresholds=(20 10 5) #battery levels to notify at
 interval=10 #seconds between checking
 
 #create a 1ms dummy notification to get an id we can use for all of the rest
