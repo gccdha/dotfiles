@@ -44,7 +44,7 @@
       "hyprland.start"
       (lib.generators.mkLuaInline ''
       function()
-        hl.exec_cmd("eww open bar")
+        hl.exec_cmd("qs")
         hl.exec_cmd(", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%")
         hl.exec_cmd("systemctl --user start hypridle.service")
         hl.exec_cmd("swaync")

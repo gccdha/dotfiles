@@ -68,6 +68,7 @@
       pkgs.libnotify
     pkgs.brightnessctl          #backlight manager
     pkgs.eww                    #bar and widget maker
+    pkgs.quickshell             #widget maker
     pkgs.hyprpaper              #wallpapers
     pkgs.fastfetch              #neofetch
     pkgs.plymouth               #Bootloader splashscreen
