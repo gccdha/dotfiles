@@ -1,33 +1,33 @@
 #! /bin/sh
 
 
-#TODO: make the script work even when image path has %20 like escape chars in it instead of spaces 
+set_wallpaper () {
+  curl --fail --silent --output "/tmp/music_album.png" $path1
 
-path2="$(playerctl metadata -f '{{mpris:artUrl}}' | sed 's/file:\/\///')"
+  #shrink image to 1x1 pixel to get the average value
+  local hex="$(magick $path1 -resize 1x1 txt:- | grep '0,0' | awk '{print $3}')"
+ 
+  #fill the remaining area of the background with the average pixel color
+  #WARN: size is hardcoded to get good result for FW16
+  magick $path1 -background "$hex" -gravity Center -extent 1280x800 /tmp/music_wallpaper.png
+
+  #WARN: monitor name is hardcoded, only sets on the one monitor
+  hyprctl hyprpaper wallpaper "eDP-1, /tmp/music_wallpaper.png" 
+}
+
+
+path2="$(playerctl metadata -f '{{mpris:artUrl}}')"
 path1=$path2
 
-hyprctl hyprpaper unload /tmp/music_wallpaper.png
-cp $path1 /tmp/music_album.png
-hex="$(magick $path1 -resize 1x1 txt:- | grep '0,0' | awk '{print $3}')"
-magick $path1 -background "$hex" -gravity Center -extent 1280x800 /tmp/music_wallpaper.png
-#sleep 1
-hyprctl hyprpaper preload /tmp/music_wallpaper.png
-hyprctl hyprpaper wallpaper "eDP-1, /tmp/music_wallpaper.png"
+set_wallpaper
 
-
-playerctl -F metadata | while read -r title art; do
-  path1="$(playerctl metadata -f '{{mpris:artUrl}}' | sed 's/file:\/\///')"
-  title="$(playerctl metadata -f '{{xesam:title}}')"
-
+playerctl metadata -f '{{mpris:artUrl}}' -F | while read -r path1; do
   if [ "$path1" != "$path2" ] && [ "$title" != "Advertisement" ]; then
-    hyprctl hyprpaper unload /tmp/music_wallpaper.png
-    cp $path1 /tmp/music_album.png
-    hex="$(magick $path1 -resize 1x1 txt:- | grep '0,0' | awk '{print $3}')"
-#    echo "$hex"
-    magick $path1 -background "$hex" -gravity Center -extent 1280x800 /tmp/music_wallpaper.png
-#   sleep 1
-    hyprctl hyprpaper preload /tmp/music_wallpaper.png
-    hyprctl hyprpaper wallpaper "eDP-1, /tmp/music_wallpaper.png"
+    set_wallpaper
     path2=$path1
   fi
 done
+
+
+
+

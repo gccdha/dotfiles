@@ -7,7 +7,7 @@ notification_id=$(notify-send -p "Battery notifications started" --expire-time=1
 
 pid_flag=0
 num_thresholds=2
-threshold_flags=(0 0)
+threshold_flags=(0 0 0)
 bat_cap=$(cat /sys/class/power_supply/BAT1/charge_full) # get max chanrge
 
 while sleep "$interval";

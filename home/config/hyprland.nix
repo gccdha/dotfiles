@@ -51,6 +51,7 @@
         hl.exec_cmd("alacritty -e zsh -c 'bat /home/realram/todo.txt; exec zsh' & disown")
         hl.exec_cmd("zsh /home/realram/.dotfiles/battery_notification/battery_notification.sh")
         hl.exec_cmd("hyprctl output create headless")
+        hl.exec_cmd("echo 'noinhibit' > /tmp/inhibit_status")
       end
       '')
       ];
@@ -471,15 +472,21 @@
         {
           timeout = 300; # 5min
           on-timeout = "loginctl lock-session";
+          condition_cmd = "echo 'noinhibit' | cmp /tmp/inhibit_status";
+          condition_retry = 300;
         }
         {
           timeout = 330; # 5.5min
           on-timeout = "hyprctl dispatch dpms off";
           on-resume = "hyprctl dispatch dpms on";
+          condition_cmd = "echo 'noinhibit' | cmp /tmp/inhibit_status";
+          condition_retry = 300;
         }
         {
           timeout = 1800; # 30min
           on-timeout = "systemctl hibernate";
+          condition_cmd = "echo 'noinhibit' | cmp /tmp/inhibit_status";
+          condition_retry = 300;
         }
       ];
     };
