@@ -281,6 +281,9 @@
 
   networking.firewall.checkReversePath = "loose";
 
+  # enable qt for better debugging when writing QML
+  qt.enable = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 22 ];
   # networking.firewall.allowedTCPPorts = [ 8080 ];
