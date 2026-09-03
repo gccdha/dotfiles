@@ -110,6 +110,8 @@
     pkgs.rocmPackages.clr       #for hashcat
     pkgs.jq                     #command line json manipulator
     pkgs.framework-tool         #allows low level control and analysis of system info (fan speed for example)
+    pkgs.units                  #gnu units for unit based calculations
+    pkgs.uiua                   #stack based programming language
 
   
     # pkgs.atuin                  #shell history search
