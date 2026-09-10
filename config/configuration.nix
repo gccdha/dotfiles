@@ -210,6 +210,9 @@
     };
   };
 
+
+  services.fwupd.enable = true;
+
   #services.tlp = {
   #  enable = true;
   #  settings = {

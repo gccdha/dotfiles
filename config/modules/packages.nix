@@ -92,7 +92,7 @@
     pkgs.digikam                #photo organization and basic editing
 
     #-----Utilities---
-    pkgs.fwupd                  #firmware update
+    # pkgs.fwupd                  #firmware update
     pkgs.bluez                  #bluetooth
     pkgs.wget                   #cli downloads
     pkgs.zsh                    #shell
