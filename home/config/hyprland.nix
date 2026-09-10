@@ -66,7 +66,7 @@
         scale = "1";
       } 
       {
-        output = "HEADLESS-2";
+        output = "HEADLESS-1";
         disabled = true;
       }
       {

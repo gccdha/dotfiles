@@ -154,6 +154,11 @@
 
   services.tuned = {
     enable = true;
+    profiles = 
+      {balanced = {                    # encountered problems with video power saving options
+        main.include = "balanced";
+        video.enabled = "false";
+      };};
     settings = {
       dynamic_tuning = true;
     };
