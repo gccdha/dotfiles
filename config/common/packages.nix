@@ -91,6 +91,7 @@
     # pkgs.wgcf                   #wireguard cloudflare warp client
     #-----Misc-----
     pkgs.maple-mono.NF          #maple mono nerdfont LOC
+    pkgs.font-awesome           #fontawesome font
     # pkgs.itd                    # infinitime daemon (removed because it contains an error in the latest release. check back to see if updated)
     # pkgs.watchmate              #infinitime management app
     # pkgs.ckb-next               #manages rgb on corsair mouse
