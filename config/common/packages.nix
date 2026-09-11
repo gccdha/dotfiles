@@ -1,5 +1,4 @@
 {inputs, lib, pkgs, system, ...}:{
-
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
       "obsidian"
@@ -8,59 +7,42 @@
       "copilot.vim"
       "spotify"
       "discord"
-      
     ];
+  
+  programs.steam.enable = true;
+  programs.thunar.enable = true;
+  programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1"; #tell electron apps that its wayland
+
   environment.systemPackages = [
     pkgs.git # install first for flakes
-
-    #NOTE: LOC means that the package might do better in another module
-    #NOTE: HOM means that the package might do better in home manager (TODO)
-
     #-----Applications-----
     pkgs.firefox                #web browser
     pkgs.alacritty              #terminal
     pkgs.kitty                  #terminal
-    pkgs.thunar            #GUI file explorer
+    pkgs.thunar                 #GUI file explorer
     pkgs.steam                  #game launcher
     pkgs.vscodium               #GUI IDE
     pkgs.vlc                    #Audio/Video player
     pkgs.obsidian               #Markdown notetaking
-    # pkgs.vesktop                #discord client
     pkgs.discord
     #                           #Neovim (nixvim flake)
     inputs.nixvim-flake.packages.${system}.default
-    # pkgs.lutris                 #game compat (for trackmania)
     pkgs.prismlauncher          #minecraft launcher
     pkgs.zathura                #pdf viewer
     pkgs.lumafly                #hollow knight mod launcher
     pkgs.tor-browser            #TOR browser
     pkgs.taskwarrior3           #cli task manager
     pkgs.timewarrior            #cli time trackr
-    # pkgs.qgis                   #gis viewer
     pkgs.olympus                #celeste mod manager
     (pkgs.olympus.override {celesteWrapper = "steam-run"; })
-    pkgs.proton-vpn
-    pkgs.godot
-
-    #pkgs.everest-mons           #celeste mod manager
-    #   pkgs.icu                  #unicode library
+    pkgs.proton-vpn             #proton vpn
+    pkgs.godot                  #godot game engine
     # pkgs.sage                   #cli math engine
-
-    
     pkgs.spotify                #music
     # pkgs.postman                #API tester
-    # pkgs.digikam                #image library manager
-    # #                           #plover stenography 
-    pkgs.plover_5
-    # (inputs.plover-flake.packages.${system}.plover.with-plugins (
-    #   ps: with ps; [
-    #     plover-lapwing-aio
-    #     plover-output-dotool
-    #   ]
-    # ))
-
-
-
+    pkgs.plover_5                 #plover stenography 
     #-----Desktop environment-----
     pkgs.hyprland               #wm
     pkgs.wofi                   #wayland app launcher
@@ -71,17 +53,13 @@
     pkgs.quickshell             #widget maker
     pkgs.hyprpaper              #wallpapers
     pkgs.fastfetch              #neofetch
-    pkgs.plymouth               #Bootloader splashscreen
     #                           #sddm and theme
     inputs.sddm-astro.packages.${system}.sddm-astro
     pkgs.hyprshot               # screenshot
     pkgs.gammastep              # for blue light filtering (REPLACE WITH HYPRSUNSET)
     pkgs.hyprshutdown           # for shutting down the system gracefully
-    # pkgs.sddm-astronaut
-
     # pkgs.greetd.tuigreet        #tui sddm alternative
     # pkgs.mpvpaper               #video wallpapers
-
     #-----Media-----
     pkgs.wireplumber            #pipewire helper
     pkgs.cava                   #cli audio visualizer
@@ -90,9 +68,7 @@
     pkgs.pulseaudio             #enables access to pulse audio commands for pipewire
     pkgs.feh                    #simple image viewer
     pkgs.digikam                #photo organization and basic editing
-
     #-----Utilities---
-    # pkgs.fwupd                  #firmware update
     pkgs.bluez                  #bluetooth
     pkgs.wget                   #cli downloads
     pkgs.zsh                    #shell
@@ -107,27 +83,16 @@
     pkgs.zellij                 #simple "multiplexer"
     pkgs.ncdu                   #tui disk information
     pkgs.unzip                  #open zip files
-    pkgs.hashcat                #password cracking for cybersec class
-    pkgs.rocmPackages.clr       #for hashcat
     pkgs.jq                     #command line json manipulator
     pkgs.framework-tool         #allows low level control and analysis of system info (fan speed for example)
     pkgs.units                  #gnu units for unit based calculations
     pkgs.uiua                   #stack based programming language
-
-  
     # pkgs.atuin                  #shell history search
-    # pkgs.wireguard-tools        #wireguard cli tools
     # pkgs.wgcf                   #wireguard cloudflare warp client
-    
     #-----Misc-----
-    pkgs.qmk                    #keyboard control
-      pkgs.qmk-udev-rules       #needed for qmk to work LOC
     pkgs.maple-mono.NF          #maple mono nerdfont LOC
-    #pkgs.uwsm                   #universal wayland session manager
     # pkgs.itd                    # infinitime daemon (removed because it contains an error in the latest release. check back to see if updated)
-    pkgs.watchmate              #infinitime management app
-    pkgs.ckb-next               #manages rgb on corsair mouse
-    
-
+    # pkgs.watchmate              #infinitime management app
+    # pkgs.ckb-next               #manages rgb on corsair mouse
   ];
 }

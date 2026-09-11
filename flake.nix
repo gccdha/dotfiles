@@ -32,7 +32,8 @@
       FW16 = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs system nix-colors; };
         modules = [
-            ./config/configuration.nix
+            ./config/common 
+            ./config/fw16
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
@@ -40,6 +41,19 @@
               home-manager.extraSpecialArgs = { inherit nix-colors; };
             }
             grub2-themes.nixosModules.default
+        ];
+      };
+      FW13 = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs system nix-colors; };
+        modules = [
+            ./config/common 
+            ./common/fw13
+            home-manager.nixosModules.home-manager {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.rr = import ./home_fw13/home.nix;
+              home-manager.extraSpecialArgs = { inherit nix-colors; };
+            }
         ];
       };
     };

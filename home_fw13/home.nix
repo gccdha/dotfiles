@@ -28,8 +28,8 @@
 
   home = {
     # pointerCursor.hyprcursor.enable = true;
-    username = "realram";
-    homeDirectory = "/home/realram";
+    username = "rr";
+    homeDirectory = "/home/rr";
     packages = [];
     stateVersion = "23.11"; #no touchy touchy
   };
