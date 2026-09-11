@@ -47,7 +47,7 @@
         specialArgs = { inherit inputs system nix-colors; };
         modules = [
             ./config/common 
-            ./common/fw13
+            ./config/fw13
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
