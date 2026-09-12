@@ -27,13 +27,16 @@
 
   console.keyMap = "dvorak";
 
+  services.xserver = { # required for greeter i think
+    xkb.layout = "us,us";
+    xkb.variant = "dvorak,";                           #set dvorak as keyboard layout
+    xkb.options = "grp:win_space_toggle";
+    enable = true;                                     #enable X11
+  };
+
   #User config 
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-
-
-  #TODO: add time zone in global secrets file
-
 
   #Services
 
@@ -69,5 +72,15 @@
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
   };
+
+  #bluetooth
+  services.blueman.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings.General.Experimental = true;
+  };
+  
+
 
 }

@@ -15,6 +15,14 @@
   programs.hyprlock.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; #tell electron apps that its wayland
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.symbols-only
+    nerd-fonts.monaspace
+    font-awesome
+    maple-mono.NF
+  ];
+
   environment.systemPackages = [
     pkgs.git # install first for flakes
     #-----Applications-----
@@ -90,8 +98,7 @@
     # pkgs.atuin                  #shell history search
     # pkgs.wgcf                   #wireguard cloudflare warp client
     #-----Misc-----
-    pkgs.maple-mono.NF          #maple mono nerdfont LOC
-    pkgs.font-awesome           #fontawesome font
+    pkgs.maple-mono.NF          #maple mono nerdfont TODO: Why is this here? is it ok to just install it above?
     # pkgs.itd                    # infinitime daemon (removed because it contains an error in the latest release. check back to see if updated)
     # pkgs.watchmate              #infinitime management app
     # pkgs.ckb-next               #manages rgb on corsair mouse
