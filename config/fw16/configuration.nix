@@ -4,7 +4,7 @@
   users.users.realram = {
     isNormalUser = true;
     description = "realram";
-    extraGroups = [ "networkmanager" "wheel" "audio" "input" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "input" "docker" "libvirtd" ];
   };
 
   #TODO: remove this hopefully
@@ -66,9 +66,10 @@
     pkgs.plymouth              # bootloader splashscreen
     pkgs.qmk                   # keyboard controll
     pkgs.qmk-udev-rules        # needed for qmk to work
-    
-
   ];
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   
 

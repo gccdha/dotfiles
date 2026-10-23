@@ -26,14 +26,14 @@ else
 fi
 
 if ! prompt "Would you like to use the date as the commit message?"; then
-  sudo git commit -m "build at $(date +"%Y-%m-%d at %H:%M")"
+  git commit -m "build at $(date +"%Y-%m-%d at %H:%M")"
 else
   commit=""
   read -p "Commit message: " commit
-  sudo git commit -m "$commit"
+  git commit -m "$commit"
 fi
-
+git pull
 git push
 
-sudo nixos-rebuild switch --flake path:/home/realram/.dotfiles
+sudo nixos-rebuild switch --flake path:/home/realram/.dotfiles#$(hostname)
 
