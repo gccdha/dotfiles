@@ -48,7 +48,7 @@
         hl.exec_cmd(", XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%")
         hl.exec_cmd("systemctl --user start hypridle.service")
         hl.exec_cmd("swaync")
-        hl.exec_cmd("alacritty -e zsh -c 'bat /home/realram/todo.txt; exec zsh' & disown")
+        hl.exec_cmd("kitty -e zsh -c 'bat /home/realram/todo.txt; exec zsh' & disown")
         hl.exec_cmd("zsh /home/realram/.dotfiles/battery_notification/battery_notification.sh")
         hl.exec_cmd("hyprctl output create headless")
         hl.exec_cmd("echo 'noinhibit' > /tmp/inhibit_status")
@@ -79,7 +79,7 @@
     ];
 
     #VARS
-    terminal._var = "alacritty";
+    terminal._var = "kitty";
     fileManager._var = "thunar";
     menu._var ="wofi --show drun -a -I";
 
