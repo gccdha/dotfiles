@@ -17,6 +17,8 @@
 
       pixel_scroll = "yes";
 
+      remember_window_size = "no";
+
 
       mouse_hide_wait = "3.0";
 
