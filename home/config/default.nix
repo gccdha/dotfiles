@@ -5,6 +5,7 @@
     ./xdg_config.nix
     ./zsh.nix
     ./taskwarrior.nix
+    ./kitty.nix
     #./timewarrior.nix
     #./colors.nix
     #./colorconfig.nix
