@@ -1,12 +1,11 @@
 {
   programs.kitty = {
     enable = true;
-    setting = {
+    settings = {
       font_size = "14.0";
 
       disable_ligatures = "never";
 
-      font_features = ["CaskaydiaCoveNFM-Regular +calt +ss01 +ss19" "CaskaydiaCoveNFM-Italic +ss01"];
 
       scrollbar = "scrolled-and-hovered";
 
@@ -49,6 +48,15 @@
       color14 = "#93d3c3";
       color15 = "#f8f8f8";
 
-      }; 
+    }; 
+
+    extraConfig = ''
+      font_features = "CaskaydiaCoveNFM-Regular +calt +ss01 +ss19"
+      font_features = "CaskaydiaCoveNFM-Italic +ss01"
+      font_family      family='CaskaydiaCove Nerd Font Mono' postscript_name=CaskaydiaCoveNFM-Regular
+      bold_font        family='CaskaydiaCove Nerd Font Mono' style=Bold
+      italic_font      auto
+      bold_italic_font family='CaskaydiaCove Nerd Font Mono' style='Bold Italic'
+    '';
     };
   }
