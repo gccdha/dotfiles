@@ -51,8 +51,8 @@
     }; 
 
     extraConfig = ''
-      font_features = "CaskaydiaCoveNFM-Regular +calt +ss01 +ss19"
-      font_features = "CaskaydiaCoveNFM-Italic +ss01"
+      font_features   "CaskaydiaCoveNFM-Regular +calt +ss01 +ss19"
+      font_features   "CaskaydiaCoveNFM-Italic +ss01"
       font_family      family='CaskaydiaCove Nerd Font Mono' postscript_name=CaskaydiaCoveNFM-Regular
       bold_font        family='CaskaydiaCove Nerd Font Mono' style=Bold
       italic_font      auto
