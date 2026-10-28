@@ -6,6 +6,7 @@
     ./zsh.nix
     ./taskwarrior.nix
     ./kitty.nix
+    ./zellij.nix
     #./timewarrior.nix
     #./colors.nix
     #./colorconfig.nix

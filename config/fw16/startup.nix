@@ -32,8 +32,10 @@
 
     # STARTUP LOG SETTINGS
     consoleLogLevel = 0;
-    initrd.verbose = false;
-    initrd.systemd.enable = true;
+
+    # NO LONGER HAVE ANY EFFECT:
+    # initrd.verbose = false;
+    # initrd.systemd.enable = true;
 
     # KERNEL (some settings required for the splash, grub, etc.)
     kernelParams = [
