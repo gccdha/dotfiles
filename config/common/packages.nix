@@ -45,12 +45,14 @@
     pkgs.timewarrior            #cli time trackr
     pkgs.olympus                #celeste mod manager
     (pkgs.olympus.override {celesteWrapper = "steam-run"; })
-    pkgs.proton-vpn             #proton vpn
-    pkgs.godot                  #godot game engine
+    # pkgs.proton-vpn             #proton vpn
+    # pkgs.godot                  #godot game engine
     # pkgs.sage                   #cli math engine
     pkgs.spotify                #music
     # pkgs.postman                #API tester
     pkgs.plover_5                 #plover stenography 
+    pkgs.typst                  #typesetting
+    pkgs.sage                   #math cli
     #-----Desktop environment-----
     pkgs.hyprland               #wm
     pkgs.wofi                   #wayland app launcher
@@ -76,7 +78,7 @@
     pkgs.pulseaudio             #enables access to pulse audio commands for pipewire
     pkgs.feh                    #simple image viewer
     pkgs.digikam                #photo organization and basic editing
-    #-----Utilities---
+    #-----Utilities----
     pkgs.bluez                  #bluetooth
     pkgs.wget                   #cli downloads
     pkgs.zsh                    #shell
