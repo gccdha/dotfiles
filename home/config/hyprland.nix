@@ -40,6 +40,8 @@
 
     #STARTUP 
 
+
+
     on._args = [
       "hyprland.start"
       (lib.generators.mkLuaInline ''
@@ -118,7 +120,7 @@
         border_size = 3;
         gaps_in = 5;
         gaps_out = 20;
-        "col.active_border" = { colors = ["rgba(33ccffee)" "rgba(9999ffee)"]; angle = 45; };
+        "col.active_border" = { colors = ["rgba(6380a7ff)" "rgba(903371ff)"]; angle = 45; };
         "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
       };
@@ -147,7 +149,7 @@
     
       # MISC
       misc = {
-        disable_splash_rendering = true;
+        disable_splash_rendering = false;
         force_default_wallpaper = 0;
         animate_manual_resizes = false;
         animate_mouse_windowdragging = false;
@@ -198,7 +200,10 @@
     #  mouse: rely on mouse movement
 
     mod._var = "SUPER";
+
     bind = [
+      "$mod, F, exec, firefox"
+
       { _args = [
         (lib.generators.mkLuaInline "mod .. \"+ return\"")
         (lib.generators.mkLuaInline "hl.dsp.exec_cmd(terminal)")
@@ -273,6 +278,8 @@
 
 
       # WORKSPACE NAVIGATION
+
+      
 
       { _args = [
         (lib.generators.mkLuaInline "mod ..\"+ 1\"")
